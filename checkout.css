@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+}
+header {
+  background-image: url("https://cdn.shopify.com/s/files/1/0054/6665/2718/files/checkout-header.jpg?41107");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 15em;
+  position: relative;
+}
+#logo_box {
+  width: 60%;
+  height: 6em;
+  position: relative;
+  left: 12%;
+  top: 45%;
+}
+#logo {
+  width: 18%;
+  height: 100%;
+}
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  header {
+    height: 6em;
+  }
+  #logo_box {
+    top: 10%;
+    width: 30%;
+    height: 4em;
+    left: 4%;
+  }
+  #logo {
+    width: 100%;
+  }
+}
+
+/* container */
+#container {
+  width: 74%;
+  display: flex;
+  margin: auto;
+  border: 1px solid black;
+  margin-top: 2em;
+  height: 30em;
+  justify-content: space-between;
+}
+#container_left {
+  width: 60%;
+  height: 100%;
+  border: 1px solid red;
+}
+#container_right {
+  width: 38%;
+  height: 100%;
+  border: 1px solid red;
+}
+
+ol {
+  width: 60%;
+  border: 1px solid teal;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* overflow: hidden; */
+  justify-content: space-between;
+  margin: auto;
+}
+
+li {
+  padding: 0;
+  max-width: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+#circle {
+  width: 2em;
+  height: 2em;
+  border: 1px solid red;
+  border-radius: 50%;
+  color: white;
+  background-color: #52b359;
+  box-shadow: 0 0 21px rgb(59 179 0);
+  text-align: center;
+}
