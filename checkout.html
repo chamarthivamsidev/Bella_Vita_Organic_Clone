@@ -13,6 +13,17 @@
     />
     <!-- CSS  -->
     <link rel="stylesheet" href="./checkout.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -28,7 +39,7 @@
     </header>
     <div id="container">
       <div id="container_left">
-        <ol>
+        <!-- <ol>
           <li>
             <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
             <a href="#cart">CART</a>
@@ -45,9 +56,300 @@
             <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
             <a href="#Pay">PAYMENT</a>
           </li>
-        </ol>
+        </ol> -->
+        <!-- <div id="status">
+          <div class="status_title">
+            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
+          </div>
+          <div class="filled"></div>
+          <div class="status_title">
+            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
+          </div>
+          <div class="dotted">
+            <hr style="border-top: 2px dotted gray" />
+          </div>
+          <div class="status_title">
+            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
+          </div>
+          <div class="dotted"></div>
+          <div class="status_title">
+            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
+          </div>
+        </div> -->
+        <section id="contact_info">
+          <div id="contact_info_top">
+            <h2 class="title">CONTACT INFORMATION</h2>
+            <div id="login_details">
+              <div id="admin">
+                <img src="./checkout/admin.png" alt="" />
+              </div>
+              <div id="details">
+                <p>vamsi chamarthi(vamsi1147@gmail.com)</p>
+                <a href="#cart">Logout</a>
+              </div>
+            </div>
+            <div id="check">
+              <input type="checkbox" class="checkbox_size" />
+              <label id="check_label">Email/SMS me with news and offers</label>
+            </div>
+            <div id="dotted_div"></div>
+          </div>
+          <div id="contact_info_bottom">
+            <h2 class="title">SHIPPING ADDRESS</h2>
+            <!-- <div id="fl">
+              <div class="inputField">
+                <input type="text" placeholder=" " />
+                <span>First Name</span>
+              </div>
+              <div class="inputField">
+                <input type="text" placeholder=" " />
+                <span>Last Name</span>
+              </div>
+              <div class="inputField">
+                <input type="text" placeholder=" " />
+                <span>Hello neame bavhgac ahgvaghsvc ach</span>
+              </div>
+            </div> -->
+            <div id="fl">
+              <div class="form-floating mb-3" id="no">
+                <input
+                  type="email"
+                  class="form-control bw"
+                  id="floatingInput1"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">First Name</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control bw"
+                  id="floatingInput2"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Last Name</label>
+              </div>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control bw"
+                id="floatingInput3"
+                placeholder="Password"
+              />
+              <label for="floatingPassword"
+                >Flat, House No, Building, Company, Apartment</label
+              >
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control bw"
+                id="floatingInput4"
+                placeholder="Password"
+              />
+              <label for="floatingPassword"
+                >Area, Colony, Street, Sector, Village</label
+              >
+            </div>
+            <div id="f2">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control bw"
+                  id="floatingInput5"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">City</label>
+              </div>
+              <div class="form-floating">
+                <select
+                  class="form-select"
+                  id="floatingInput7"
+                  aria-label="Floating label select example"
+                >
+                  <option selected>State</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Three</option>
+                </select>
+                <label for="floatingSelectGrid">State</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control bw"
+                  id="floatingInput8"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">PIN code</label>
+              </div>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control bw"
+                id="floatingInput10"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Phone</label>
+            </div>
+            <button id="btn">CONTINUE TO SHIPPING & PAYMENT</button>
+            <div id="payment_methods">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/payments-stripe-sub-footer_2.svg?v=1616140901"
+                alt="payment_methods"
+                id="pm"
+              />
+            </div>
+          </div>
+          <footer>
+            <span>Refund policy</span>
+            <span>Privacy policy</span>
+          </footer>
+        </section>
       </div>
-      <div id="container_right"></div>
+      <div id="container_right">
+        <div id="item_div"></div>
+        <div id="advert">
+          
+        </div>
+      </div>
     </div>
   </body>
 </html>
+<script>
+  // let items = [
+  //   {
+  //     Category: "skin",
+  //     Name: "Day Glow Sunscreen Face and Body Lotion SPF 30+for All Skin Types",
+  //     Img_url:
+  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/DAYGLOW-01_1024x1024.jpg?v=1632393899",
+  //     Price: "301",
+  //     Rating: "4.2523",
+  //     Review: "773",
+  //     Qty: 1,
+  //   },
+  //   {
+  //     Category: "skin",
+  //     Name: "Glowtion Face & Body Butter Lotion For Skin Brightening & Deep Moisturization - 100ml",
+  //     Img_url:
+  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Glowtion-01_1024x1024.jpg?v=1634219952",
+  //     Price: "249",
+  //     Rating: "4.5",
+  //     Review: "240",
+  //     Qty: 1,
+  //   },
+  //   {
+  //     Category: "skin",
+  //     Name: "Glowey Face Pack, Scrub & Face Wash 3 in 1 for Glowing Skin & Radiance Unisex Ayurveda, 100 g With Free Face Pack Applicator Brush",
+  //     Img_url:
+  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Glowey-01_3122f22c-16b1-4dfe-ab7e-f5a4e16c2aaa_1024x1024.jpg?v=1631708103",
+  //     Price: "298",
+  //     Rating: "3.9885",
+  //     Review: "523",
+  //     Qty: 1,
+  //   },
+  // ];
+  // localStorage.setItem("cart_items", JSON.stringify(items));
+  let cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
+
+  let item_div = document.getElementById("item_div");
+
+  display(cart_items);
+
+  function display(cart_items) {
+    cart_items.map((el, index) => {
+      let item = document.createElement("div");
+      item.setAttribute("id", "item");
+
+      //image div
+      let item_img_div = document.createElement("div");
+      item_img_div.setAttribute("id", "item_img_div");
+
+      let img = document.createElement("img");
+      img.setAttribute("id", "item_img");
+      img.src = el.Img_url;
+
+      let qty_circle = document.createElement("div");
+      qty_circle.setAttribute("id", "qty_circle");
+
+      let qty = document.createElement("p");
+      qty.innerHTML = `${el.Qty}`;
+
+      //title div
+      let title_div = document.createElement("div");
+      title_div.setAttribute("id", "title_div");
+
+      let count_div = document.createElement("div");
+      count_div.setAttribute("id", "count_div");
+
+      let decre = document.createElement("p");
+      decre.setAttribute("id", "decre");
+      decre.innerHTML = `-`;
+
+      decre.addEventListener("click", () => {
+        let q = cart_items[index].Qty;
+        let p = cart_items[index].Price;
+        if (q > 1) {
+          q--;
+          cart_items[index].Qty = q;
+          qty.innerHTML = `${q}`;
+          count_value.innerHTML = `${q}`;
+          price.innerHTML = `₹${p * q}.00`;
+          cart_items[index].Amount = `${p * q}`;
+          localStorage.setItem("cart_items", JSON.stringify(cart_items));
+        }
+      });
+
+      let count_value = document.createElement("p");
+      count_value.setAttribute("id", "count_value");
+      count_value.innerHTML = `${el.Qty}`;
+
+      let incre = document.createElement("p");
+      incre.setAttribute("id", "incre");
+      incre.innerHTML = `+`;
+
+      incre.addEventListener("click", () => {
+        let p = cart_items[index].Price;
+        let q = cart_items[index].Qty;
+        q++;
+        cart_items[index].Qty = q;
+        qty.innerHTML = `${q}`;
+        count_value.innerHTML = `${q}`;
+        price.innerHTML = `₹${p * q}.00`;
+        cart_items[index].Amount = `${p * q}`;
+        localStorage.setItem("cart_items", JSON.stringify(cart_items));
+      });
+
+      let title = document.createElement("p");
+      title.setAttribute("id", "item_name");
+      title.innerHTML = `${el.Name}`;
+
+      // price div
+      let price_div = document.createElement("div");
+      price_div.setAttribute("id", "price_div");
+
+      let delete_icon = document.createElement("div");
+      delete_icon.setAttribute("id", "delete_icon");
+
+      let price = document.createElement("div");
+      price.setAttribute("id", "item_price");
+
+      if (el.Amount === undefined) {
+        price.innerHTML = `₹${el.Price}.00`;
+      } else {
+        price.innerHTML = `₹${el.Amount}.00`;
+      }
+
+      price_div.append(delete_icon, price);
+      count_div.append(decre, count_value, incre);
+      title_div.append(title, count_div);
+      qty_circle.append(qty);
+      item_img_div.append(qty_circle, img);
+      item.append(item_img_div, title_div, price_div);
+      item_div.append(item);
+    });
+  }
+</script>
