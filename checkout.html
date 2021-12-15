@@ -43,7 +43,44 @@
       </div>
     </header>
     <div id="container">
-      <div id="container_left"></div>
+      <div id="container_left">
+        <div id="container_left_top">
+          <div id="top">
+            <div id="status">
+              <div class="status_title">
+                <div class="circle" id="cart">
+                  <p style="margin: 0; padding-top: 4px">></p>
+                </div>
+              </div>
+              <div class="filled"></div>
+              <div class="status_title">
+                <div class="circle" id="da">
+                  <p style="margin: 0; padding-top: 4px">></p>
+                </div>
+              </div>
+              <div class="dotted" id="prepaid_dot"></div>
+              <div class="status_title">
+                <div class="circle" id="prepaid">
+                  <p style="margin: 0; padding-top: 4px">></p>
+                </div>
+              </div>
+              <div class="dotted" id="payment_dot"></div>
+              <div class="status_title">
+                <div class="circle" id="pay">
+                  <p style="margin: 0; padding-top: 4px">></p>
+                </div>
+              </div>
+            </div>
+            <div id="top_titles">
+              <p id="cart_page">CART</p>
+              <p id="delivery_page">DELIVERY ADDRESS</p>
+              <p id="prepaid_page">PREPAID/COD</p>
+              <p id="payment_page">PAYMENT</p>
+            </div>
+          </div>
+        </div>
+        <div id="container_left_bottom"></div>
+      </div>
       <div id="container_right">
         <div id="item_div"></div>
         <div id="item_div_bottom"></div>
@@ -52,17 +89,107 @@
   </body>
 </html>
 <script type="module">
-  import content from "./scripts/checkout.js";
+  let cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
+  let u_address = JSON.parse(localStorage.getItem("user_address"));
+  let user_address = u_address.join(",");
+  let check_status = JSON.parse(localStorage.getItem("check_status"));
+  let cart_page = document.getElementById("cart_page");
+  let delivery_page = document.getElementById("delivery_page");
+  let prepaid_page = document.getElementById("prepaid_page");
+  let payment_page = document.getElementById("payment_page");
+
+  delivery_page.addEventListener("click", () => {
+    for (let key in check_status) {
+      key == "delivery" ? (check_status[key] = "1") : (check_status[key] = "0");
+    }
+    localStorage.setItem("check_status", JSON.stringify(check_status));
+    document.location.reload();
+  });
+
+  prepaid_page.addEventListener("click", () => {
+    for (let key in check_status) {
+      key == "cod" ? (check_status[key] = "1") : (check_status[key] = "0");
+    }
+    localStorage.setItem("check_status", JSON.stringify(check_status));
+    document.location.reload();
+  });
+
+  payment_page.addEventListener("click", () => {
+    for (let key in check_status) {
+      key == "payment" ? (check_status[key] = "1") : (check_status[key] = "0");
+    }
+    localStorage.setItem("check_status", JSON.stringify(check_status));
+    document.location.reload();
+  });
+
+  // import
+  import { content, formValidate } from "./scripts/checkout.js";
   import {
     price_desc,
     check_content,
     header,
+    prepaid_content,
+    payment_content,
   } from "./components/check_static.js";
 
-  let container_left = document.getElementById("container_left");
-  container_left.innerHTML = check_content();
+  if (check_status.delivery == 1) {
+    let container_left_bottom = document.getElementById(
+      "container_left_bottom"
+    );
+    container_left_bottom.innerHTML = check_content();
+    formValidate();
+  } else if (check_status.cod == 1) {
+    let container_left_bottom = document.getElementById(
+      "container_left_bottom"
+    );
+    container_left_bottom.innerHTML = prepaid_content();
+    let btn_prepaid = document.getElementById("btn_prepaid");
+    let shipping_address = document.getElementById("shipping_address");
+    let prepaid_circle = document.getElementById("prepaid");
+    let delivery_cicle = document.getElementById("da");
+    let prepaid_dot = document.getElementById("prepaid_dot");
 
-  let cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
+    prepaid_dot.classList.toggle("toggle");
+    delivery_cicle.style.boxShadow = "none";
+    prepaid_circle.style.boxShadow = "0 0 21px rgb(59 179 0)";
+    prepaid_circle.style.backgroundColor = "#52b359";
+    shipping_address.innerHTML = `${u_address}`;
+    btn_prepaid.addEventListener("click", () => {
+      for (let key in check_status) {
+        key == "payment"
+          ? (check_status[key] = "1")
+          : (check_status[key] = "0");
+      }
+      localStorage.setItem("check_status", JSON.stringify(check_status));
+      document.location.reload();
+    });
+  } else if (check_status.payment == 1) {
+    let container_left_bottom = document.getElementById(
+      "container_left_bottom"
+    );
+    container_left_bottom.innerHTML = payment_content();
+    let btn_prepaid = document.getElementById("btn_prepaid");
+    let shipping_address = document.getElementById("shipping_address");
+    let prepaid_circle = document.getElementById("prepaid");
+    let delivery_cicle = document.getElementById("da");
+    let prepaid_dot = document.getElementById("prepaid_dot");
+    let payment_dot = document.getElementById("payment_dot");
+    let payment_circle = document.getElementById("pay");
+
+    payment_dot.classList.toggle("toggle");
+    prepaid_dot.classList.toggle("toggle");
+    delivery_cicle.style.boxShadow = "none";
+    payment_circle.style.boxShadow = "0 0 21px rgb(59 179 0)";
+    payment_circle.style.backgroundColor = "#52b359";
+    prepaid_circle.style.backgroundColor = "#52b359";
+
+    shipping_address.innerHTML = `${u_address}`;
+    btn_prepaid.addEventListener("click", () => {
+      alert("Order Placed sucessfully");
+    });
+  }
+
+  // console.log("user_address:", user_address);
 
   // displaying data on UI
   let item_div = document.getElementById("item_div");
@@ -119,4 +246,13 @@
   //   },
   // ];
   // localStorage.setItem("cart_items", JSON.stringify(items));
+
+  // let obj = {
+  //   cart: 0,
+  //   delivery: 1,
+  //   cod: 0,
+  //   payment: 0,
+  // };
+
+  // localStorage.setItem("check_status", JSON.stringify(obj));
 </script>
