@@ -24,6 +24,11 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <!-- boostrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <header>
@@ -38,188 +43,49 @@
       </div>
     </header>
     <div id="container">
-      <div id="container_left">
-        <!-- <ol>
-          <li>
-            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
-            <a href="#cart">CART</a>
-          </li>
-          <li>
-            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
-            <a href="#D">DELIVERY ADDRESS</a>
-          </li>
-          <li>
-            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
-            <a href="#P">PREPAID/COD</a>
-          </li>
-          <li>
-            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
-            <a href="#Pay">PAYMENT</a>
-          </li>
-        </ol> -->
-        <!-- <div id="status">
-          <div class="status_title">
-            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
-          </div>
-          <div class="filled"></div>
-          <div class="status_title">
-            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
-          </div>
-          <div class="dotted">
-            <hr style="border-top: 2px dotted gray" />
-          </div>
-          <div class="status_title">
-            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
-          </div>
-          <div class="dotted"></div>
-          <div class="status_title">
-            <div id="circle"><p style="margin: 0; margin-top: 4px">></p></div>
-          </div>
-        </div> -->
-        <section id="contact_info">
-          <div id="contact_info_top">
-            <h2 class="title">CONTACT INFORMATION</h2>
-            <div id="login_details">
-              <div id="admin">
-                <img src="./checkout/admin.png" alt="" />
-              </div>
-              <div id="details">
-                <p>vamsi chamarthi(vamsi1147@gmail.com)</p>
-                <a href="#cart">Logout</a>
-              </div>
-            </div>
-            <div id="check">
-              <input type="checkbox" class="checkbox_size" />
-              <label id="check_label">Email/SMS me with news and offers</label>
-            </div>
-            <div id="dotted_div"></div>
-          </div>
-          <div id="contact_info_bottom">
-            <h2 class="title">SHIPPING ADDRESS</h2>
-            <!-- <div id="fl">
-              <div class="inputField">
-                <input type="text" placeholder=" " />
-                <span>First Name</span>
-              </div>
-              <div class="inputField">
-                <input type="text" placeholder=" " />
-                <span>Last Name</span>
-              </div>
-              <div class="inputField">
-                <input type="text" placeholder=" " />
-                <span>Hello neame bavhgac ahgvaghsvc ach</span>
-              </div>
-            </div> -->
-            <div id="fl">
-              <div class="form-floating mb-3" id="no">
-                <input
-                  type="email"
-                  class="form-control bw"
-                  id="floatingInput1"
-                  placeholder="name@example.com"
-                />
-                <label for="floatingInput">First Name</label>
-              </div>
-              <div class="form-floating">
-                <input
-                  type="password"
-                  class="form-control bw"
-                  id="floatingInput2"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">Last Name</label>
-              </div>
-            </div>
-            <div class="form-floating">
-              <input
-                type="password"
-                class="form-control bw"
-                id="floatingInput3"
-                placeholder="Password"
-              />
-              <label for="floatingPassword"
-                >Flat, House No, Building, Company, Apartment</label
-              >
-            </div>
-            <div class="form-floating">
-              <input
-                type="password"
-                class="form-control bw"
-                id="floatingInput4"
-                placeholder="Password"
-              />
-              <label for="floatingPassword"
-                >Area, Colony, Street, Sector, Village</label
-              >
-            </div>
-            <div id="f2">
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  class="form-control bw"
-                  id="floatingInput5"
-                  placeholder="name@example.com"
-                />
-                <label for="floatingInput">City</label>
-              </div>
-              <div class="form-floating">
-                <select
-                  class="form-select"
-                  id="floatingInput7"
-                  aria-label="Floating label select example"
-                >
-                  <option selected>State</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                  <option value="3">Three</option>
-                </select>
-                <label for="floatingSelectGrid">State</label>
-              </div>
-              <div class="form-floating">
-                <input
-                  type="password"
-                  class="form-control bw"
-                  id="floatingInput8"
-                  placeholder="Password"
-                />
-                <label for="floatingPassword">PIN code</label>
-              </div>
-            </div>
-            <div class="form-floating">
-              <input
-                type="password"
-                class="form-control bw"
-                id="floatingInput10"
-                placeholder="Password"
-              />
-              <label for="floatingPassword">Phone</label>
-            </div>
-            <button id="btn">CONTINUE TO SHIPPING & PAYMENT</button>
-            <div id="payment_methods">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/payments-stripe-sub-footer_2.svg?v=1616140901"
-                alt="payment_methods"
-                id="pm"
-              />
-            </div>
-          </div>
-          <footer>
-            <span>Refund policy</span>
-            <span>Privacy policy</span>
-          </footer>
-        </section>
-      </div>
+      <div id="container_left"></div>
       <div id="container_right">
         <div id="item_div"></div>
-        <div id="advert">
-          
-        </div>
+        <div id="item_div_bottom"></div>
       </div>
     </div>
   </body>
 </html>
-<script>
+<script type="module">
+  import content from "./scripts/checkout.js";
+  import {
+    price_desc,
+    check_content,
+    header,
+  } from "./components/check_static.js";
+
+  let container_left = document.getElementById("container_left");
+  container_left.innerHTML = check_content();
+
+  let cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
+
+  // displaying data on UI
+  let item_div = document.getElementById("item_div");
+  let item_div_bottom = document.getElementById("item_div_bottom");
+
+  item_div_bottom.innerHTML = price_desc();
+  // setting total amount
+  var sub_total = document.getElementById("sub_total");
+  var sub_total_bottom = document.getElementById("tdb_amount");
+
+  let x = 0;
+  for (let i = 0; i < cart_items.length; i++) {
+    if (cart_items[i].Amount === undefined) {
+      x = x + Number(cart_items[i].Qty) * Number(cart_items[i].Price);
+    } else {
+      x = x + Number(cart_items[i].Amount);
+    }
+  }
+  sub_total.innerHTML = `₹ ${x}.00`;
+  sub_total_bottom.innerHTML = `<span>INR</span> ₹${x}.00`;
+
+  content(cart_items, item_div, sub_total, sub_total_bottom);
+
   // let items = [
   //   {
   //     Category: "skin",
@@ -253,103 +119,4 @@
   //   },
   // ];
   // localStorage.setItem("cart_items", JSON.stringify(items));
-  let cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
-
-  let item_div = document.getElementById("item_div");
-
-  display(cart_items);
-
-  function display(cart_items) {
-    cart_items.map((el, index) => {
-      let item = document.createElement("div");
-      item.setAttribute("id", "item");
-
-      //image div
-      let item_img_div = document.createElement("div");
-      item_img_div.setAttribute("id", "item_img_div");
-
-      let img = document.createElement("img");
-      img.setAttribute("id", "item_img");
-      img.src = el.Img_url;
-
-      let qty_circle = document.createElement("div");
-      qty_circle.setAttribute("id", "qty_circle");
-
-      let qty = document.createElement("p");
-      qty.innerHTML = `${el.Qty}`;
-
-      //title div
-      let title_div = document.createElement("div");
-      title_div.setAttribute("id", "title_div");
-
-      let count_div = document.createElement("div");
-      count_div.setAttribute("id", "count_div");
-
-      let decre = document.createElement("p");
-      decre.setAttribute("id", "decre");
-      decre.innerHTML = `-`;
-
-      decre.addEventListener("click", () => {
-        let q = cart_items[index].Qty;
-        let p = cart_items[index].Price;
-        if (q > 1) {
-          q--;
-          cart_items[index].Qty = q;
-          qty.innerHTML = `${q}`;
-          count_value.innerHTML = `${q}`;
-          price.innerHTML = `₹${p * q}.00`;
-          cart_items[index].Amount = `${p * q}`;
-          localStorage.setItem("cart_items", JSON.stringify(cart_items));
-        }
-      });
-
-      let count_value = document.createElement("p");
-      count_value.setAttribute("id", "count_value");
-      count_value.innerHTML = `${el.Qty}`;
-
-      let incre = document.createElement("p");
-      incre.setAttribute("id", "incre");
-      incre.innerHTML = `+`;
-
-      incre.addEventListener("click", () => {
-        let p = cart_items[index].Price;
-        let q = cart_items[index].Qty;
-        q++;
-        cart_items[index].Qty = q;
-        qty.innerHTML = `${q}`;
-        count_value.innerHTML = `${q}`;
-        price.innerHTML = `₹${p * q}.00`;
-        cart_items[index].Amount = `${p * q}`;
-        localStorage.setItem("cart_items", JSON.stringify(cart_items));
-      });
-
-      let title = document.createElement("p");
-      title.setAttribute("id", "item_name");
-      title.innerHTML = `${el.Name}`;
-
-      // price div
-      let price_div = document.createElement("div");
-      price_div.setAttribute("id", "price_div");
-
-      let delete_icon = document.createElement("div");
-      delete_icon.setAttribute("id", "delete_icon");
-
-      let price = document.createElement("div");
-      price.setAttribute("id", "item_price");
-
-      if (el.Amount === undefined) {
-        price.innerHTML = `₹${el.Price}.00`;
-      } else {
-        price.innerHTML = `₹${el.Amount}.00`;
-      }
-
-      price_div.append(delete_icon, price);
-      count_div.append(decre, count_value, incre);
-      title_div.append(title, count_div);
-      qty_circle.append(qty);
-      item_img_div.append(qty_circle, img);
-      item.append(item_img_div, title_div, price_div);
-      item_div.append(item);
-    });
-  }
 </script>
