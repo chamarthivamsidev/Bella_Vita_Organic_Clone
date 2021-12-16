@@ -59,8 +59,9 @@ function content(cart_items, location, sub_total, sub_total_bottom) {
       incre.innerHTML = `+`;
 
       incre.addEventListener("click", () => {
-        let p = cart_items[index].Price;
-        let q = cart_items[index].Qty;
+        let p = Number(cart_items[index].Price);
+        let q = Number(cart_items[index].Qty);
+        console.log(p, q);
         q++;
         cart_items[index].Qty = q;
         qty.innerHTML = `${q}`;
@@ -86,6 +87,12 @@ function content(cart_items, location, sub_total, sub_total_bottom) {
       let delete_icon = document.createElement("div");
       delete_icon.setAttribute("id", "delete_icon");
 
+      delete_icon.addEventListener("click", () => {
+        cart_items.splice(index, 1);
+        localStorage.setItem("cart_items", JSON.stringify(cart_items));
+        document.location.reload();
+      });
+
       let price = document.createElement("div");
       price.setAttribute("id", "item_price");
 
@@ -106,8 +113,8 @@ function content(cart_items, location, sub_total, sub_total_bottom) {
   }
 }
 
+// form validation
 function formValidate() {
-  // form validation
   let submit = document.getElementById("btn");
   submit.addEventListener("click", () => {
     let check_status = JSON.parse(localStorage.getItem("check_status"));

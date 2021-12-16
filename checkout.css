@@ -38,6 +38,7 @@ header {
   height: 100%;
   /* border: 1px solid red; */
 }
+/*<--------------------------------- check status css------------------------> */
 #status {
   width: 100%;
   margin: auto;
@@ -76,6 +77,10 @@ header {
   background-color: #52b359;
   text-align: center;
 }
+.circle p {
+  margin: 0;
+  padding-top: 4px;
+}
 #da {
   box-shadow: 0 0 21px rgb(59 179 0);
 }
@@ -105,7 +110,7 @@ header {
 #top_titles p {
   font-size: 0.8em;
 }
-/* contact info */
+/*<--------------------------------- check delivery page part-------------------------> */
 #contact_info {
   width: 100%;
   margin-top: 3em;
@@ -532,6 +537,12 @@ i {
   #logo {
     width: 100%;
   }
+  #status {
+    height: 1.6em;
+  }
+  .circle p {
+    padding-top: 0px;
+  }
 }
 /* container */
 @media only screen and (min-width: 0px) and (max-width: 500px) {
@@ -583,13 +594,11 @@ i {
     font-size: 0.8em;
   }
 }
-
-/* cod part css */
-/* #demo {
+/*<--------------------------------- check cod part-------------------------> */
+#demo {
   width: 100%;
-  height: auto;
-  border: 1px solid red;
-} */
+  height: 62em;
+}
 #contact_div {
   width: 100%;
   border: 1px solid #ccc;
@@ -759,7 +768,11 @@ input[type="radio"]:hover {
     height: 3.5em;
   }
 }
-/* payment pag */
+/*<--------------------------------- check payment page part-------------------------> */
+#payment_contact_div {
+  width: 100%;
+  border: 1px solid #ccc;
+}
 #payment_method {
   display: flex;
   width: 95%;
@@ -792,9 +805,37 @@ input[type="radio"]:hover {
 .cred_images {
   display: flex;
 }
+#btn_payment {
+  width: 30%;
+  padding: 2%;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  height: 4em;
+  font-weight: bold;
+  border-radius: 2px;
+  margin-top: 1.5em;
+  float: right;
+}
 /* media queries */
 @media only screen and (min-width: 0px) and (max-width: 500px) {
   #payment_method {
     font-size: 0.8em;
+  }
+  #shipping_add {
+    margin-bottom: 4em;
+  }
+  #paytm_offer {
+    height: 3em;
+  }
+  #secure {
+    font-size: 0.8em;
+  }
+  .credit_card p {
+    font-size: 0.9em;
+  }
+  .cred_images img {
+    width: 2.5em;
+    height: 1.5em;
   }
 }

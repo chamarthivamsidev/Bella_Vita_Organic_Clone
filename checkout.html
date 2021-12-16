@@ -13,6 +13,7 @@
     />
     <!-- CSS  -->
     <link rel="stylesheet" href="./checkout.css" />
+    <!-- bootstrap cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -49,25 +50,25 @@
             <div id="status">
               <div class="status_title">
                 <div class="circle" id="cart">
-                  <p style="margin: 0; padding-top: 4px">></p>
+                  <p>></p>
                 </div>
               </div>
               <div class="filled"></div>
               <div class="status_title">
                 <div class="circle" id="da">
-                  <p style="margin: 0; padding-top: 4px">></p>
+                  <p>></p>
                 </div>
               </div>
               <div class="dotted" id="prepaid_dot"></div>
               <div class="status_title">
                 <div class="circle" id="prepaid">
-                  <p style="margin: 0; padding-top: 4px">></p>
+                  <p>></p>
                 </div>
               </div>
               <div class="dotted" id="payment_dot"></div>
               <div class="status_title">
                 <div class="circle" id="pay">
-                  <p style="margin: 0; padding-top: 4px">></p>
+                  <p>></p>
                 </div>
               </div>
             </div>
@@ -81,7 +82,7 @@
         </div>
         <div id="container_left_bottom"></div>
       </div>
-      <div id="container_right">
+      <div id="container_right" class="payment_marge">
         <div id="item_div"></div>
         <div id="item_div_bottom"></div>
       </div>
@@ -89,6 +90,41 @@
   </body>
 </html>
 <script type="module">
+  // let items = [
+  //   {
+  //     Category: "skin",
+  //     Name: "Day Glow Sunscreen Face and Body Lotion SPF 30+for All Skin Types",
+  //     Img_url:
+  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/DAYGLOW-01_1024x1024.jpg?v=1632393899",
+  //     Price: "301",
+  //     Rating: "4.2523",
+  //     Review: "773",
+  //     Qty: 1,
+  //   },
+  //   {
+  //     Category: "skin",
+  //     Name: "Glowtion Face & Body Butter Lotion For Skin Brightening & Deep Moisturization - 100ml",
+  //     Img_url:
+  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Glowtion-01_1024x1024.jpg?v=1634219952",
+  //     Price: "249",
+  //     Rating: "4.5",
+  //     Review: "240",
+  //     Qty: 1,
+  //   },
+  //   {
+  //     Category: "skin",
+  //     Name: "Glowey Face Pack, Scrub & Face Wash 3 in 1 for Glowing Skin & Radiance Unisex Ayurveda, 100 g With Free Face Pack Applicator Brush",
+  //     Img_url:
+  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Glowey-01_3122f22c-16b1-4dfe-ab7e-f5a4e16c2aaa_1024x1024.jpg?v=1631708103",
+  //     Price: "298",
+  //     Rating: "3.9885",
+  //     Review: "523",
+  //     Qty: 1,
+  //   },
+  // ];
+  // localStorage.setItem("cart_items", JSON.stringify(items));
+
+  // element catching
   let cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
   let u_address = JSON.parse(localStorage.getItem("user_address"));
   let user_address = u_address.join(",");
@@ -98,6 +134,7 @@
   let prepaid_page = document.getElementById("prepaid_page");
   let payment_page = document.getElementById("payment_page");
 
+  // checkout status
   delivery_page.addEventListener("click", () => {
     for (let key in check_status) {
       key == "delivery" ? (check_status[key] = "1") : (check_status[key] = "0");
@@ -122,7 +159,7 @@
     document.location.reload();
   });
 
-  // import
+  // importing data
   import { content, formValidate } from "./scripts/checkout.js";
   import {
     price_desc,
@@ -168,7 +205,7 @@
       "container_left_bottom"
     );
     container_left_bottom.innerHTML = payment_content();
-    let btn_prepaid = document.getElementById("btn_prepaid");
+    let btn_payment = document.getElementById("btn_payment");
     let shipping_address = document.getElementById("shipping_address");
     let prepaid_circle = document.getElementById("prepaid");
     let delivery_cicle = document.getElementById("da");
@@ -184,18 +221,17 @@
     prepaid_circle.style.backgroundColor = "#52b359";
 
     shipping_address.innerHTML = `${u_address}`;
-    btn_prepaid.addEventListener("click", () => {
-      alert("Order Placed sucessfully");
+    btn_payment.addEventListener("click", () => {
+      window.location.href = "./payment.html";
     });
   }
-
-  // console.log("user_address:", user_address);
 
   // displaying data on UI
   let item_div = document.getElementById("item_div");
   let item_div_bottom = document.getElementById("item_div_bottom");
 
   item_div_bottom.innerHTML = price_desc();
+
   // setting total amount
   var sub_total = document.getElementById("sub_total");
   var sub_total_bottom = document.getElementById("tdb_amount");
@@ -212,47 +248,4 @@
   sub_total_bottom.innerHTML = `<span>INR</span> ₹${x}.00`;
 
   content(cart_items, item_div, sub_total, sub_total_bottom);
-
-  // let items = [
-  //   {
-  //     Category: "skin",
-  //     Name: "Day Glow Sunscreen Face and Body Lotion SPF 30+for All Skin Types",
-  //     Img_url:
-  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/DAYGLOW-01_1024x1024.jpg?v=1632393899",
-  //     Price: "301",
-  //     Rating: "4.2523",
-  //     Review: "773",
-  //     Qty: 1,
-  //   },
-  //   {
-  //     Category: "skin",
-  //     Name: "Glowtion Face & Body Butter Lotion For Skin Brightening & Deep Moisturization - 100ml",
-  //     Img_url:
-  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Glowtion-01_1024x1024.jpg?v=1634219952",
-  //     Price: "249",
-  //     Rating: "4.5",
-  //     Review: "240",
-  //     Qty: 1,
-  //   },
-  //   {
-  //     Category: "skin",
-  //     Name: "Glowey Face Pack, Scrub & Face Wash 3 in 1 for Glowing Skin & Radiance Unisex Ayurveda, 100 g With Free Face Pack Applicator Brush",
-  //     Img_url:
-  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Glowey-01_3122f22c-16b1-4dfe-ab7e-f5a4e16c2aaa_1024x1024.jpg?v=1631708103",
-  //     Price: "298",
-  //     Rating: "3.9885",
-  //     Review: "523",
-  //     Qty: 1,
-  //   },
-  // ];
-  // localStorage.setItem("cart_items", JSON.stringify(items));
-
-  // let obj = {
-  //   cart: 0,
-  //   delivery: 1,
-  //   cod: 0,
-  //   payment: 0,
-  // };
-
-  // localStorage.setItem("check_status", JSON.stringify(obj));
 </script>

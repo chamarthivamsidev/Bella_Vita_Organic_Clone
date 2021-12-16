@@ -235,7 +235,8 @@ function prepaid_content() {
 
 function payment_content() {
   return ` 
-      <div id="contact_div">
+     <div id="demo">
+      <div id="payment_contact_div">
         <h2 class="contact_title">CONTACT</h2>
         <hr class="contact_hr" />
         <div id="email">
@@ -245,7 +246,7 @@ function payment_content() {
         <h2 class="contact_title">SHIP TO</h2>
         <hr class="contact_hr" />
         <div id="shipping_add">
-          <p id="shipping_address">vamsichamarthi1147@gmail.com</p>
+          <p id="shipping_address"></p>
           <p class="change">Change</p>
         </div>
         <h2 class="contact_title">METHOD</h2>
@@ -310,13 +311,14 @@ function payment_content() {
           </div>
           </div>
         </div>
-        <button id="btn_prepaid">CONTINUE TO PAYMENT</button>
+        <button id="btn_payment">COMPLETE ORDER</button>
         
       </div>
       <footer>
             <span>Refund policy</span>
             <span>Privacy policy</span>
           </footer>
+</div>
     `;
 }
 
