@@ -4,10 +4,10 @@ function price_desc() {
           <p class="blink_me">Last Few Hours Left!</p>
           <div id="slider">
             <div class="child">
-              <img src="./checkout/check_1_1.jpg" alt="" />
+              <img src="./images/checkout/check_1_1.jpg" alt="" />
             </div>
             <div class="child">
-              <img src="./checkout/check_1_2.jpg" alt="" />
+              <img src="./images/checkout/check_1_2.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ function check_content() {
             <h2 class="title">CONTACT INFORMATION</h2>
             <div id="login_details">
               <div id="admin">
-                <img src="./checkout/admin.png" alt="" />
+                <img src="./images/checkout/admin.png" alt="" />
               </div>
               <div id="details">
                 <p>vamsi chamarthi(vamsi1147@gmail.com)</p>
