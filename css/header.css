@@ -106,6 +106,9 @@ header {
   font-size: 0.9em;
   font-weight: bold;
 }
+#header_items_top div p {
+  margin: 0;
+}
 #header_items_bottom {
   width: 40%;
   height: 50%;
@@ -181,4 +184,23 @@ header {
   font-weight: bold;
   font-family: sans-serif;
   margin-top: 0.1em;
+}
+/* dropdown content */
+#header_combos {
+  position: relative;
+}
+#combos_dropdown {
+  position: absolute;
+  width: 15em;
+  height: 7em;
+  border: 1px solid black;
+  z-index: 10000;
+  margin-top: 1em;
+}
+.combos_dropdown_div {
+  padding-top: 1em;
+  width: 80%;
+  margin: auto;
+  height: 50%;
+  border-bottom: 1px solid #929292;
 }
