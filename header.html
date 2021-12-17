@@ -20,6 +20,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- bootstrap icons cdn -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <div id="top_banner">
@@ -56,20 +67,65 @@
           <div>
             <p class="un">BUILD A BOX</p>
           </div>
-          <div>
+          <div id="header_category">
             <p class="un">BY CATEGORY</p>
+            <div class="dropdown_div">
+              <div class="dropdown_div_content">
+                <p>Skin Care</p>
+              </div>
+              <div class="dropdown_div_content"><p>Hair Care</p></div>
+              <div class="dropdown_div_content"><p>Face Care</p></div>
+              <div class="dropdown_div_content"><p>Body Care</p></div>
+              <div class="dropdown_div_content"><p>Essential Oils</p></div>
+              <div class="dropdown_div_content"><p>Perfumes</p></div>
+              <div class="dropdown_div_content"><p>Natural Soaps</p></div>
+              <div class="dropdown_div_content"><p>Hair Com</p></div>
+              <div class="dropdown_div_content"><p>Dry Skin</p></div>
+            </div>
           </div>
-          <div>
+          <div id="header_concern">
             <p class="un">BY CONCERN</p>
+            <div class="dropdown_div">
+              <div class="dropdown_div_content">
+                <p>Acne & Pimples</p>
+              </div>
+              <div class="dropdown_div_content"><p>Oily Skin</p></div>
+              <div class="dropdown_div_content"><p>Tanning</p></div>
+              <div class="dropdown_div_content"><p>Underarm Lightening</p></div>
+              <div class="dropdown_div_content"><p>Blackheads</p></div>
+              <div class="dropdown_div_content"><p>Body Odor</p></div>
+              <div class="dropdown_div_content"><p>Hair Fall</p></div>
+              <div class="dropdown_div_content"><p>Dandruff</p></div>
+              <div class="dropdown_div_content"><p>Dry Skin</p></div>
+              <div class="dropdown_div_content"><p>Sensitive Skin</p></div>
+              <div class="dropdown_div_content"><p>Dull Skin</p></div>
+              <div class="dropdown_div_content">
+                <p>Blemishes & Pigmentation</p>
+              </div>
+            </div>
           </div>
-          <div>
+          <div id="header_ingradients">
             <p class="un">BY INGRADIENT</p>
+            <div class="dropdown_div">
+              <div class="dropdown_div_content"><p>Aloevera</p></div>
+              <div class="dropdown_div_content"><p>Coffee</p></div>
+              <div class="dropdown_div_content"><p>Honey</p></div>
+              <div class="dropdown_div_content"><p>Neem</p></div>
+              <div class="dropdown_div_content"><p>Tea Tree</p></div>
+              <div class="dropdown_div_content"><p>Sandalwood</p></div>
+              <div class="dropdown_div_content"><p>Saffron</p></div>
+              <div class="dropdown_div_content"><p>Coconut Oil</p></div>
+              <div class="dropdown_div_content"><p>Rose</p></div>
+              <div class="dropdown_div_content"><p>Shea Butter</p></div>
+              <div class="dropdown_div_content"><p>Fuller's Earth</p></div>
+              <div class="dropdown_div_content"><p>All Ingradients</p></div>
+            </div>
           </div>
           <div id="header_combos">
             <p class="un">COMBOS</p>
-            <div id="combos_dropdown">
-              <div class="combos_dropdown_div"><p>Combos</p></div>
-              <div class="combos_dropdown_div"><p>Gifts</p></div>
+            <div class="dropdown_div">
+              <div class="dropdown_div_content"><p>Combos</p></div>
+              <div class="dropdown_div_content"><p>Gifts</p></div>
             </div>
           </div>
         </div>
@@ -80,8 +136,17 @@
           <div>
             <p class="un">NATURAL SOAPS</p>
           </div>
-          <div>
+          <div id="header_more">
             <p class="un">MORE</p>
+            <div class="dropdown_div">
+              <div class="dropdown_div_content"><p>Aloevera</p></div>
+              <div class="dropdown_div_content"><p>Coffee</p></div>
+              <div class="dropdown_div_content"><p>Honey</p></div>
+              <div class="dropdown_div_content"><p>Neem</p></div>
+              <div class="dropdown_div_content"><p>Tea Tree</p></div>
+              <div class="dropdown_div_content"><p>Sandalwood</p></div>
+              <div class="dropdown_div_content"><p>Saffron</p></div>
+            </div>
           </div>
         </div>
       </div>
@@ -101,4 +166,13 @@
 <script>
   let click_here = document.getElementById("click_here");
   let download = document.getElementById("download");
+  let combos_dropdown = document.getElementById("combos_dropdown");
+  let header_combos = document.getElementById("header_combos");
+
+  // header_combos.addEventListener("mouseenter", () => {
+  //   combos_dropdown.style.display = "block";
+  // });
+  // header_combos.addEventListener("mouseleave", () => {
+  //   combos_dropdown.style.display = "none";
+  // });
 </script>
