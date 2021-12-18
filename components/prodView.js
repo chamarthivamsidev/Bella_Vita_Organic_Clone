@@ -1,7 +1,7 @@
-import { sticky_view, getStars, slider, whatsappChat } from "./components/utility.js";
+import { sticky_view, getStars, slider, whatsappChat } from "./utility.js";
 
 // importing data.js file for product data
-import { bestsellerList } from "./components/data.js";
+import { bestsellerList } from "./data.js";
 
 // sticky bellacash and whatapp icon display
 let st = document.getElementsByClassName("sticky-view")[0];

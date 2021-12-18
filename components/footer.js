@@ -44,24 +44,24 @@ function footer() {
         <div class="futbox4">
           <p>CONTACT US</p>
           <hr class="hr" />
-          <p class="icon futbox3_content">
+          <p class="icon_1 futbox3_content">
             <i class="fas fa-home"></i
             ><span class="futbox3_content">
               Office Location: Plot no. 351, <br />
               UdyogVihar Phase II, Gurgaon,Haryana,India
             </span>
           </p>
-          <p class="icon futbox3_content">
+          <p class="icon_1 futbox3_content">
             <i class="far fa-envelope-open"></i
             ><span class="futbox3_content">
               shopa@bellavitaorganic.com
             </span>
           </p>
-          <p class="icon futbox3_content">
+          <p class="icon_1 futbox3_content">
             <i class="fas fa-phone"></i
             ><span class="futbox3_content">+91 9311732440</span>
           </p>
-          <p class="icon futbox3_content">
+          <p class="icon_1 futbox3_content">
             <i class="fas fa-business-time"></i>
             <span class="futbox3_content"
               >AM To 8:00 PM , Monday ,<br />To Sunday</span

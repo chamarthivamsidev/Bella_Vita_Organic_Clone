@@ -286,7 +286,7 @@ function header_fun() {
 
   //redirecting to product page
   header_all_pro.addEventListener("click", () => {
-    alert("pro");
+    window.location.href = "./product.html";
   });
 
   //displaying cart items on side navbar
@@ -364,13 +364,13 @@ function header_fun() {
     });
   }
 
-  if (login_status.login === "false") {
-    login.style.display = "block";
-  } else {
-    let user_name = document.querySelectorAll(".customer_login")[1];
-    user_name.innerHTML = `${login_status.name}`;
-    login_details.style.display = "block";
-  }
+  // if (login_status.login === "false") {
+  //   login.style.display = "block";
+  // } else {
+  //   let user_name = document.querySelectorAll(".customer_login")[1];
+  //   user_name.innerHTML = `${login_status.name}`;
+  //   login_details.style.display = "block";
+  // }
 
   //Login
 
@@ -456,7 +456,7 @@ function header_fun() {
   });
 
   company_logo.addEventListener("click", () => {
-    alert("Please Provide home path");
+    window.location.href = "./index.html";
   });
 
   //sticky navbar

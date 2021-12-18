@@ -90,49 +90,23 @@
   </body>
 </html>
 <script type="module">
-  // let items = [
-  //   {
-  //     Category: "skin",
-  //     Name: "Day Glow Sunscreen Face and Body Lotion SPF 30+for All Skin Types",
-  //     Img_url:
-  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/DAYGLOW-01_1024x1024.jpg?v=1632393899",
-  //     Price: "301",
-  //     Rating: "4.2523",
-  //     Review: "773",
-  //     Qty: 1,
-  //   },
-  //   {
-  //     Category: "skin",
-  //     Name: "Glowtion Face & Body Butter Lotion For Skin Brightening & Deep Moisturization - 100ml",
-  //     Img_url:
-  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Glowtion-01_1024x1024.jpg?v=1634219952",
-  //     Price: "249",
-  //     Rating: "4.5",
-  //     Review: "240",
-  //     Qty: 1,
-  //   },
-  //   {
-  //     Category: "skin",
-  //     Name: "Glowey Face Pack, Scrub & Face Wash 3 in 1 for Glowing Skin & Radiance Unisex Ayurveda, 100 g With Free Face Pack Applicator Brush",
-  //     Img_url:
-  //       "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Glowey-01_3122f22c-16b1-4dfe-ab7e-f5a4e16c2aaa_1024x1024.jpg?v=1631708103",
-  //     Price: "298",
-  //     Rating: "3.9885",
-  //     Review: "523",
-  //     Qty: 1,
-  //   },
-  // ];
-  // localStorage.setItem("cart_items", JSON.stringify(items));
-
   // element catching
   let cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
-  let u_address = JSON.parse(localStorage.getItem("user_address"));
-  let user_address = u_address.join(",");
+  // let u_address = JSON.parse(localStorage.getItem("user_address"));
+  // let user_address = u_address.join(",");
   let check_status = JSON.parse(localStorage.getItem("check_status"));
   let cart_page = document.getElementById("cart_page");
   let delivery_page = document.getElementById("delivery_page");
   let prepaid_page = document.getElementById("prepaid_page");
   let payment_page = document.getElementById("payment_page");
+
+  // let obj = {
+  //   cart: 0,
+  //   delivery: 1,
+  //   cod: 0,
+  //   payment: 0,
+  // };
+  // check_status;
 
   // checkout status
   delivery_page.addEventListener("click", () => {
@@ -179,6 +153,8 @@
     let container_left_bottom = document.getElementById(
       "container_left_bottom"
     );
+    let u_address = JSON.parse(localStorage.getItem("user_address"));
+    let user_address = u_address.join(",");
     container_left_bottom.innerHTML = prepaid_content();
     let btn_prepaid = document.getElementById("btn_prepaid");
     let shipping_address = document.getElementById("shipping_address");
@@ -204,6 +180,8 @@
     let container_left_bottom = document.getElementById(
       "container_left_bottom"
     );
+    let u_address = JSON.parse(localStorage.getItem("user_address"));
+    let user_address = u_address.join(",");
     container_left_bottom.innerHTML = payment_content();
     let btn_payment = document.getElementById("btn_payment");
     let shipping_address = document.getElementById("shipping_address");

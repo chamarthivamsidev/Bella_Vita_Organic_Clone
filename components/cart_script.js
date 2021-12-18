@@ -1,5 +1,3 @@
-
-
 // localStorage.setItem("cart_items", JSON.stringify(prod))
 
 let cartData = JSON.parse(localStorage.getItem("cart_items")) || [];
@@ -30,7 +28,10 @@ function showCartItems(data) {
             </div>
         </div>
     </div>`;
-
+    // let prod_img = document.querySelector(".card");
+    // prod_img.addEventListener("click", () => {
+    //   alert("click");
+    // });
     // Created the button, give its classes and innerHTML
     const ext = document.createElement("div");
     ext.id = "external-part";
@@ -125,28 +126,35 @@ function cart_total_value(data) {
 }
 
 // checkout button -On click switch to checkout page
-function goTocheckoutpage() {
-  localStorage.setItem("bella_cart_total", cartValue);
-  window.location.href = "checkout.html";
-}
-
+let go_to_checkou = document.getElementById("go_to_checkout");
+go_to_checkout.addEventListener("click", () => {
+  let obj = {
+    cart: 0,
+    delivery: 1,
+    cod: 0,
+    payment: 0,
+  };
+  localStorage.setItem("check_status", JSON.stringify(obj));
+  window.location.href = "./checkout.html";
+});
 
 // bottom slideshow
 
-import {sticky_view, getStars, slider, whatsappChat} from "./components/utility.js"
+import {
+  sticky_view,
+  getStars,
+  slider,
+  whatsappChat,
+} from "./utility.js";
 
 // importing data.js file for product data
-import {bestsellerList} from "./components/data.js"
+import { bestsellerList } from "./data.js";
 
-
-// sticky bellacash and whatapp icon display 
-let st=document.getElementsByClassName("sticky-view")[0];
-st.innerHTML=sticky_view();
+// sticky bellacash and whatapp icon display
+let st = document.getElementsByClassName("sticky-view")[0];
+st.innerHTML = sticky_view();
 whatsappChat();
- 
 
 // displaying slider items
 const sdata = JSON.parse(bestsellerList());
-slider(sdata,0, cartData, cart_total_value, showCartItems); //hare 0 is passing as arguments for class index where i want to inject html
-
-
+slider(sdata, 0, cartData, cart_total_value, showCartItems); //hare 0 is passing as arguments for class index where i want to inject html

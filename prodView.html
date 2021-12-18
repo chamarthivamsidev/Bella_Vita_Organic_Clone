@@ -23,21 +23,39 @@
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Roboto:wght@100;300&family=Sen:wght@400;700&family=Signika:wght@500&family=Source+Sans+3:wght@200;300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="cart_style.css" />
+    <link rel="stylesheet" href="./css/cart_style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <!-- rating stars boottrap link -->
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="productview.css" />
+    <!-- footer icon cdn -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap cdn for header icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/productview.css" />
 
     <title>Product View Page</title>
   </head>
 
   <body>
-    <!-- navbar is importing from components folder -->
-    <div class="navbar fixed sticky" id="myHeader">Navbar</div>
-    <!-- Sticky yellow icon of Bella cash left bottom corner -->
+    <div id="header_div"></div>
     <div class="sticky-view"></div>
 
     <div class="main-container">
@@ -252,7 +270,7 @@
         </div>
       </div>
     </div>
-
+    <footer></footer>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -262,4 +280,15 @@
   </body>
 </html>
 
-<script type="module" src="prodView.js"></script>
+<script type="module" src="./components/prodView.js"></script>
+<script type="module">
+  import { header, header_fun } from "./components/header.js";
+  import footer from "./components/footer.js";
+
+  let header_div = document.getElementById("header_div");
+  header_div.innerHTML = header();
+
+  header_fun();
+  let footer_div = document.querySelector("footer");
+  footer_div.innerHTML = footer();
+</script>
