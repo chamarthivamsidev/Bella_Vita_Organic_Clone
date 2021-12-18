@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .cont {
+         position: relative;
+     } */
+      /* .onBuyBtn {
+        background-color: rgb(244, 247, 253);
+        display: flex;
+        font-family: calibri;
+        border: 1px solid black;
+        width: 70%;
+        height: 600px;
+        position: fixed;
+        left: 15%;
+        top: 50px;
+        z-index: 1000;
+      }
+      .onBuyBtn .Img_divv {
+        width: 45%;
+        height: 100%;
+      }
+      .onBuyBtn .Img_divv img {
+        width: 75%;
+        height: 65%;
+        margin-left: 10%;
+        margin-top: 10%;
+      }
+      .onBuyBtn .Info_divv {
+        padding: 10px;
+        width: 55%;
+        height: 100%;
+      }
+      .onBuyBtn .Info_divv .name {
+        height: 10%;
+        width: 65%;
+        font-size: 21px;
+        font-family: calibri;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      .brnd {
+        margin-top: 25px;
+        font-size: 16px;
+        font-family: calibri;
+        font-weight: 400;
+        line-height: 30px;
+        height: 15%;
+      }
+      .br1 span {
+        margin-right: 80px;
+      }
+      .br2 span {
+        margin-right: 32px;
+      }
+      .br3 span {
+        margin-right: 48px;
+      }
+      .price {
+        margin-top: 15px;
+        width: 80%;
+      }
+      .price .num {
+        margin: 10px;
+        font-size: 25px;
+        color: red;
+      }
+      .num span:nth-child(1) {
+        text-decoration: line-through;
+        color: rgb(102, 100, 100);
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      .num + div {
+        font-weight: 100;
+        font-family: calibri;
+        font-size: 14px;
+        margin: 10px;
+      }
+      .price img {
+        width: 70px;
+      }
+      .counts {
+        border: 0.1px solid rgb(156, 155, 156);
+        width: 25%;
+        height: 35px;
+        display: flex;
+      }
+      .counts > div:nth-child(1) {
+        width: 25%;
+        text-align: center;
+        padding-top: 7px;
+      }
+      .counts > div:nth-child(1) + div {
+        padding-top: 7px;
+        width: 25%;
+        width: 68px;
+        padding-left: 36px;
+        border: 0.2px solid rgb(149, 149, 151);
+        border-bottom: 0px;
+        border-top: 0px;
+      }
+      .counts > div:nth-child(1) + div + div {
+        text-align: center;
+        padding-top: 7px;
+        width: 25%;
+      }
+      .qty button {
+        padding: 15px;
+        width: 200px;
+        background-color: rgb(62, 187, 62);
+        color: white;
+        font-weight: bold;
+      }
+      .qty button:hover {
+        background-color: black;
+      }
+      .qty {
+        margin-top: 20px;
+      }
+      .eye ion-icon {
+        font-size: 20px;
+      }
+      .people {
+        display: flex;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+      .people > div:nth-child(1) {
+        font-size: 23px;
+        margin-right: 8px;
+      }
+      .people > div:nth-child(2) {
+        margin-top: 3px;
+      }
+      .cross {
+        z-index: 1100;
+        font-size: 35px;
+        position: absolute;
+        left: 96.5%;
+        top: 1px;
+      } */
+      .cross2 {
+        z-index: 1100;
+        font-size: 30px;
+        position: absolute;
+        left: 65.5%;
+        top: 6px;
+      }
+      .appeardiv {
+        margin: auto;
+        border: 1px solid black;
+        height: 200px;
+        width: 35%;
+        display: flex;
+        font-size: 16px;
+        font-family: calibri;
+      }
+      .imgd {
+        width: 20%;
+        padding: 20px;
+      }
+      .imgd img {
+        width: 100%;
+      }
+      .det {
+        width: 65%;
+        padding: 20px;
+      }
+      .det p:nth-child(2) {
+        font-size: 12px;
+        color: green;
+        font-weight: bold;
+      }
+      .det button {
+        margin-top: 20px;
+        margin-right: 10px;
+        width: 120px;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      <div class="onBuyBtn">
+        <div class="Img_divv">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1024x1024.jpg?v=1626345623"
+            alt=""
+          />
+        </div>
+        <div class="Info_divv">
+          <div class="cross">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </div>
+          <div class="name">
+            Exfoliate Face and Body Scrub Grit, Skin Brightening, De-Tan Removal
+            - 75gm
+          </div>
+
+          <div class="brnd">
+            <div class="br1">
+              <span>Brand:</span> <span>Bella Vita Organic</span>
+            </div>
+
+            <div class="br2">
+              <span>Product Code:</span> <span>BellaScrubGrit</span>
+            </div>
+
+            <div class="br3">
+              <span>Availability:</span> <span> Many in stock</span>
+            </div>
+          </div>
+          <div class="price">
+            <div class="num"><span>Rs.275</span> <span>Rs.275</span></div>
+            <div>
+              <span
+                >or 4 interest-free payments of <strong>Rs. 62.25</strong> with
+                <img
+                  src="https://cdn.sezzle.in/branding/2.0/Sezzle_Logo_FullColor.svg"
+                  alt=""
+                  class="img_res"
+              /></span>
+            </div>
+            <div>
+              <span
+                >Our face and body accumulate a lot of unwanted particles on
+                them that damage the skin over time. They settle on the
+                ...</span
+              >
+            </div>
+          </div>
+          <div class="qty">
+            <div>
+              <p>Quantity:</p>
+              <div class="counts">
+                <div><ion-icon name="remove-outline"></ion-icon></div>
+                <div>1</div>
+                <div><ion-icon name="add-outline"></ion-icon></div>
+              </div>
+              <p>Subtotal: <strong>Rs.154</strong></p>
+              <button>BUY NOW</button>
+            </div>
+            <div class="people">
+              <div><ion-icon name="eye"></ion-icon></div>
+              <div>38 customers are viewing this product</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+   <div class="appdiv">
+    <div class="appeardiv">
+        <div class="imgd">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1024x1024.jpg?v=1626345623"
+            alt=""
+          />
+        </div>
+        <div class="det">
+          <div class="cross2">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </div>
+          <p>
+            NicoLips Lip Lightening Scrub For Dark, Dry, Chapped & Damaged Lips
+            Unisex - 20 gm
+          </p>
+          <p>IS ADDED TO YOUR SHOPPING CART.</p>
+          <div class="but">
+            <button>GO TO CART</button>
+            <button>CHECK OUT</button>
+          </div>
+        </div>
+      </div>
+   </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
+<script>
+  //document.querySelector(".onBuyBtn").style.display="none";
+</script>
