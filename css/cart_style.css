@@ -5,19 +5,8 @@
   font-family: "Heebo", sans-serif;
   font-family: "Roboto", sans-serif;
   font-family: "Sen", sans-serif;
-  /* font-family: 'Signika', sans-serif; */
-  /* font-family: 'Source Sans 3', sans-serif; */
 }
-/* Navbar */
-/* .navbar {
-  display: flex;
-  justify-content: center;
-  font-size: 5rem;
-  height: 22vh;
-  width: 100vw;
-  z-index: 2;
-  background-color: rgb(197, 185, 185);
-} */
+
 .fixed {
   display: inline-block;
   z-index: 2;
@@ -84,6 +73,7 @@
 }
 .after-navbar h4 {
   font-family: "Signika", sans-serif;
+  cursor: pointer;
 }
 
 .after-navbar .countinue-shopping-ahref {
@@ -94,13 +84,12 @@
   text-decoration: none;
   color: black;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .cart-item-details {
   /* border: 1px solid blue; */
   display: flex;
-  /* grid-template-areas: "item total"; */
-
   justify-content: space-between;
 }
 
@@ -137,8 +126,6 @@
     /* border: 1px solid red; */
     width: 100%;
     height: auto;
-    /* position:absolute; */
-    /* position:relative; */
   }
   .table-head {
     width: 80vw;
@@ -180,7 +167,7 @@
 /* Table head for cart item display and total payment section */
 .table-head {
   background-color: rgb(247, 244, 244);
-  border-bottom: 1px solid rgb(231, 231, 231);
+  /* border-bottom: 1px solid rgb(231, 231, 231); */
   height: 5vh;
   color: rgb(90, 90, 90);
   font-size: 0.9em;
@@ -204,13 +191,12 @@
   display: flex;
   height: 200px;
   /* border: 1px solid black; */
-  border-bottom: 1px solid rgb(219, 218, 218);
 }
 .item-card > img {
   max-width: 200px;
   height: 130px;
-  /* border: 1px solid black; */
   margin: auto 20px auto 0;
+  cursor: pointer;
 }
 
 .item-text p {
@@ -218,12 +204,13 @@
   padding: 0px;
   margin: 0px;
   font-weight: 100;
+  cursor: pointer;
 }
 .head-item-name > .item-name {
-  /* font-family: 'Signika', sans-serif; */
   font-size: 0.9em;
   font-weight: bold;
   margin: 5px auto 8px auto;
+  cursor: pointer;
 }
 #item_price {
   margin: 10px auto 10px auto;

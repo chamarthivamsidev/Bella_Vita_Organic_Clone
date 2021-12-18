@@ -103,7 +103,7 @@ export function slider(sdata, i, cartData, cart_total_value, showCartItems) {
     // onmouseout effect
     img.addEventListener("click", function () {
       localStorage.setItem("brod_view", JSON.stringify(item));
-      window.location.href = "prodViews.html";
+      window.location.href = "./prodView.html";
     });
 
     let buy_now = document.createElement("div");
