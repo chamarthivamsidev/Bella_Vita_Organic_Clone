@@ -100,14 +100,9 @@ header {
   margin-top: 0.5em;
   stroke: black;
 }
-/* #company_logo img {
-  width: 100%;
-  height: 100%;
-} */
 #header_items {
   height: 80%;
   width: 65%;
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   font-family: "Century Gothic", sans-serif, Arial, sans-serif;
@@ -115,26 +110,21 @@ header {
 #header_items_top {
   width: 100%;
   height: 50%;
-  /* border: 1px solid teal; */
   display: flex;
   justify-content: space-between;
-  /* font-size: 0.9em; */
   font-weight: bold;
 }
 #header_items_top div p,
 #header_items_bottom div p {
   margin: 0;
-  /* border: 1px solid black; */
   letter-spacing: 0.01em;
   font-size: 0.8em;
 }
 #header_items_bottom {
   width: 40%;
   height: 50%;
-  /* border: 1px solid teal; */
   display: flex;
   justify-content: space-around;
-  /* font-size: 0.9em; */
   font-weight: bold;
 }
 #header_items_bottom div {
@@ -163,7 +153,6 @@ header {
 #header_icons {
   height: 45%;
   width: 10%;
-  /* border: 1px solid blue; */
   margin-right: 1em;
   display: flex;
   justify-content: space-between;
@@ -177,7 +166,6 @@ header {
 }
 #cart_icon_div {
   position: relative;
-  /* border: 1px solid red; */
   width: 3.5em;
 }
 #header_cart {
@@ -243,7 +231,6 @@ header {
   width: 80%;
   margin: auto;
   height: 3em;
-  /* border: 1px solid red; */
 }
 .dropdown_div_content p:hover {
   color: gray;
@@ -265,7 +252,6 @@ header {
   margin: auto;
   margin-top: 1.5em;
   display: none;
-  /* border: 1px solid red; */
 }
 #side_navbar_login_details {
   display: none;
@@ -472,6 +458,7 @@ header {
   width: 18%;
   border: 2px solid black;
   position: fixed;
+  top: 8em;
   right: 2em;
   display: none;
   background-color: white;
