@@ -474,6 +474,7 @@ header {
   position: fixed;
   right: 2em;
   display: none;
+  background-color: white;
 }
 #search_box input {
   width: 90%;
