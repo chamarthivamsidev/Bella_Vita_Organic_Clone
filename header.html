@@ -48,7 +48,6 @@
     </div>
     <header id="navbar">
       <div id="company_logo">
-        <!-- <img src="./images/home/company_logo.jpg" alt="" /> -->
         <svg
           version="1.1"
           id="Layer_1"
@@ -248,32 +247,7 @@
         </div>
       </div>
     </header>
-    <div style="width: 100%; height: 900px" class="content">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
-      autem repudiandae exercitationem quos accusamus id sequi eos magnam eaque
-      molestiae veniam. Similique quaerat saepe cum nostrum dolores earum ipsa
-      accusamus? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Voluptatibus, autem repudiandae exercitationem quos accusamus id sequi eos
-      magnam eaque molestiae veniam. Similique quaerat saepe cum nostrum dolores
-      earum ipsa accusamus? Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Voluptatibus, autem repudiandae exercitationem quos accusamus id
-      sequi eos magnam eaque molestiae veniam. Similique quaerat saepe cum
-      nostrum dolores earum ipsa accusamus? Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Voluptatibus, autem repudiandae
-      exercitationem quos accusamus id sequi eos magnam eaque molestiae veniam.
-      Similique quaerat saepe cum nostrum dolores earum ipsa accusamus? Lorem
-      ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, autem
-      repudiandae exercitationem quos accusamus id sequi eos magnam eaque
-      molestiae veniam. Similique quaerat saepe cum nostrum dolores earum ipsa
-      accusamus? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Voluptatibus, autem repudiandae exercitationem quos accusamus id sequi eos
-      magnam eaque molestiae veniam. Similique quaerat saepe cum nostrum dolores
-      earum ipsa accusamus? Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Voluptatibus, autem repudiandae exercitationem quos accusamus id
-      sequi eos magnam eaque molestiae veniam. Similique quaerat saepe cum
-      nostrum dolores earum ipsa accusamus?
-    </div>
-
+    <!--fixed sidebar -->
     <div id="mySidenav_login" class="sidenav">
       <div class="closebtn">
         <p class="close"><span>&times;</span>close</p>
@@ -318,9 +292,19 @@
         <button id="continue_shop_btn">CONTINUE SHOPPING</button>
       </div>
     </div>
+    <div id="search_box">
+      <fieldset>
+        <input
+          type="text"
+          placeholder="Start typing... Nicolips, Eyelift, Face Wash"
+        />
+        <button id="close_search">X</button>
+      </fieldset>
+    </div>
   </body>
 </html>
 <script>
+  // getting data from local storage
   let login_status = JSON.parse(localStorage.getItem("login_status"));
   let regd_users = JSON.parse(localStorage.getItem("regd_users"));
   let cart_items = JSON.parse(localStorage.getItem("cart_items")) || 0;
@@ -334,10 +318,16 @@
   let empty_cart = document.getElementById("side_navbar_empty_cart");
   let sidenav_cart_items = document.getElementById("sidenav_cart_items");
 
+  //displaying cart items on side navbar
+
   if (cart_items.length !== 0) {
-    header_cart_qty.innerHTML = `${cart_items.length}`;
+    let y = 0;
+    y = cart_items.reduce((ac, cv) => {
+      return ac + Number(cv.Qty);
+    }, 0);
+    header_cart_qty.innerHTML = `${y}`;
     side_navbar_cart.style.display = "block";
-    display(cart_items);
+    displayItems(cart_items);
     let x = 0;
     for (let i = 0; i < cart_items.length; i++) {
       x = x + cart_items[i].Qty * cart_items[i].Price;
@@ -349,9 +339,9 @@
     empty_cart.style.display = "block";
   }
 
-  function display(arr) {
+  function displayItems(arr) {
     sidenav_cart_items.innerHTML = null;
-    arr.map((el) => {
+    arr.map((el, index) => {
       let item_div = document.createElement("div");
       item_div.setAttribute("id", "header_item_div");
 
@@ -366,12 +356,36 @@
 
       let title_div = document.createElement("div");
       title_div.setAttribute("id", "header_title_div");
-      title_div.innerHTML = `<p>${el.Name}<p><span id="delete_pro">&times;</span>`;
+
+      let name = document.createElement("p");
+      name.innerHTML = `${el.Name}`;
+
+      let del_pro = document.createElement("span");
+      del_pro.setAttribute("id", "delete_pro");
+      del_pro.innerHTML = `&times;`;
+
+      del_pro.addEventListener("click", () => {
+        cart_items.splice(index, 1);
+        localStorage.setItem("cart_items", JSON.stringify(cart_items));
+        let x = 0;
+        for (let i = 0; i < cart_items.length; i++) {
+          x = x + cart_items[i].Qty * cart_items[i].Price;
+        }
+        let y = 0;
+        y = cart_items.reduce((ac, cv) => {
+          return ac + Number(cv.Qty);
+        }, 0);
+        header_cart_qty.innerHTML = `${y}`;
+        let total_price = document.getElementById("total_price");
+        total_price.innerHTML = `Rs. ${x}`;
+        displayItems(cart_items);
+      });
 
       let price_div = document.createElement("div");
       price_div.setAttribute("id", "header_price_div");
       price_div.innerHTML = `<span>${el.Qty} X</span> <p>Rs.${el.Price}</p>`;
 
+      title_div.append(name, del_pro);
       content_div.append(title_div, price_div);
       img_div.append(img);
       item_div.append(img_div, content_div);
@@ -427,6 +441,9 @@
   let cart_icon = document.getElementById("cart_icon_div");
   let checkout_btn = document.getElementById("checkout_btn");
   let view_cart = document.getElementById("view_cart_btn");
+  let search_icon = document.getElementById("header_search");
+  let search_box = document.getElementById("search_box");
+  let close_search = document.getElementById("close_search");
 
   let check_status = JSON.parse(localStorage.getItem("check_status"));
 
@@ -456,6 +473,14 @@
 
   cart_icon.addEventListener("click", () => {
     document.getElementById("mySidenav_cart").style.width = "360px";
+  });
+
+  search_icon.addEventListener("click", () => {
+    search_box.style.display = "block";
+  });
+
+  close_search.addEventListener("click", () => {
+    search_box.style.display = "none";
   });
 
   //sticky navbar

@@ -32,17 +32,17 @@ body {
   margin-top: 1.2em;
 }
 #click_here {
-  width: 62%;
+  width: 70%;
   height: 100%;
   margin: auto;
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  display: none;
+  /* display: block; */
 }
 #click_here_btn {
-  height: 2.5em;
+  height: 2.1em;
   border-radius: 0.3em;
   background-color: white;
   color: black;
@@ -60,6 +60,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  display: none;
   /* border: 1px solid black; */
 }
 #download i {
@@ -81,7 +82,7 @@ header {
   width: 100%;
   height: 6.2em;
   background-color: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,8 +105,8 @@ header {
   height: 100%;
 } */
 #header_items {
-  height: 70%;
-  width: 60%;
+  height: 80%;
+  width: 65%;
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
@@ -117,12 +118,15 @@ header {
   /* border: 1px solid teal; */
   display: flex;
   justify-content: space-between;
-  font-size: 0.9em;
+  /* font-size: 0.9em; */
   font-weight: bold;
 }
 #header_items_top div p,
 #header_items_bottom div p {
   margin: 0;
+  /* border: 1px solid black; */
+  letter-spacing: 0.01em;
+  font-size: 0.8em;
 }
 #header_items_bottom {
   width: 40%;
@@ -130,7 +134,7 @@ header {
   /* border: 1px solid teal; */
   display: flex;
   justify-content: space-around;
-  font-size: 0.9em;
+  /* font-size: 0.9em; */
   font-weight: bold;
 }
 #header_items_bottom div {
@@ -146,7 +150,7 @@ header {
 .un:after {
   content: "";
   width: 0px;
-  height: 1px;
+  height: 0.8px;
   display: block;
   background: teal;
   transition: 300ms;
@@ -202,7 +206,7 @@ header {
   font-family: sans-serif;
   font-size: 0.9em;
 }
-/* combos dropdown content */
+/* header dropdown content */
 #header_combos,
 #header_concern,
 #header_ingradients,
@@ -424,7 +428,7 @@ header {
   font-weight: 600;
 }
 #delete_pro {
-  font-size: 2.2em;
+  font-size: 1.6em;
   color: red;
   margin-left: 0.5em;
 }
@@ -462,4 +466,27 @@ header {
   color: black;
   font-size: 1.4em;
   font-weight: 600;
+}
+/* search icon */
+#search_box {
+  width: 18%;
+  border: 2px solid black;
+  position: fixed;
+  right: 2em;
+  display: none;
+}
+#search_box input {
+  width: 90%;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+}
+#search_box button {
+  width: 10%;
+  background-color: white;
+  border: none;
+  font-size: 1.2em;
+  height: 100%;
+  font-weight: 700;
+  margin-left: -0.3em;
 }

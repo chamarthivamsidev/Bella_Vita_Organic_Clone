@@ -61,14 +61,15 @@ function content(cart_items, location, sub_total, sub_total_bottom) {
       incre.addEventListener("click", () => {
         let p = Number(cart_items[index].Price);
         let q = Number(cart_items[index].Qty);
-        console.log(p, q);
+        console.log(typeof p, typeof q);
         q++;
         cart_items[index].Qty = q;
         qty.innerHTML = `${q}`;
         count_value.innerHTML = `${q}`;
         price.innerHTML = `₹${p * q}.00`;
         cart_items[index].Amount = `${p * q}`;
-        let x = cart_items.reduce((ac, cv) => {
+        let x = 0;
+        x = cart_items.reduce((ac, cv) => {
           return ac + Number(cv.Amount);
         }, 0);
         sub_total.innerHTML = `₹ ${x}.00`;
