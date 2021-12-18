@@ -33,7 +33,7 @@
 }
 .carousel1 {
   margin-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 .carousel-cell1 {
   width: 22%;
@@ -47,13 +47,14 @@
   border-radius: 5px;
 }
 .headHr1 {
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: center;
   font-family: calibri;
-  font-size: 30px;
+  font-size: 19px;
 }
 .headHr1 > p:nth-child(2) {
-  font-size: 19px;
+  font-size: 30px;
+  margin-top: 20px;
 }
 .carousel-cell1 img {
   width: 250px;

@@ -105,7 +105,7 @@ function header() {
       <div id="header_items">
         <div id="header_items_top">
           <div>
-            <p class="un">ALL PRODUCTS</p>
+            <p class="un" id="header_all_pro">ALL PRODUCTS</p>
           </div>
           <div>
             <p class="un">BESTSELLERS</p>
@@ -207,7 +207,7 @@ function header() {
         <i class="bi bi-person" id="header_admin"></i>
         <div id="cart_icon_div">
           <i class="bi bi-cart3" id="header_cart"></i>
-          <div id="qty">
+          <div id="header_qty">
             <p id="header_cart_qty"></p>
           </div>
         </div>
@@ -282,6 +282,12 @@ function header_fun() {
   let side_navbar_cart = document.getElementById("side_navbar_cart");
   let empty_cart = document.getElementById("side_navbar_empty_cart");
   let sidenav_cart_items = document.getElementById("sidenav_cart_items");
+  let header_all_pro = document.getElementById("header_all_pro");
+
+  //redirecting to product page
+  header_all_pro.addEventListener("click", () => {
+    alert("pro");
+  });
 
   //displaying cart items on side navbar
 

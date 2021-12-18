@@ -114,6 +114,7 @@ body {
   font-size: 15px;
   font-weight: bolder;
   font-family: "Museo Sans", sans-serif !important ;
+  border: 1px solid red;
 }
 .icon > i {
   color: green;
@@ -193,4 +194,11 @@ body {
   margin-top: 0.1em;
   display: inline-block;
   font-family: "Museo Sans", sans-serif;
+}
+.foot_icon {
+  text-align: left;
+  padding-left: 0;
+}
+.foot_icon span {
+  margin: 0;
 }

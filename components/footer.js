@@ -52,14 +52,16 @@ function footer() {
             </span>
           </p>
           <p class="icon futbox3_content">
-            <i class="far fa-envelope-open"></i>
-            <span class="futbox3_content">shopa@bellavitaorganic.com</span>
+            <i class="far fa-envelope-open"></i
+            ><span class="futbox3_content">
+              shopa@bellavitaorganic.com
+            </span>
           </p>
-          <p class="icon">
+          <p class="icon futbox3_content">
             <i class="fas fa-phone"></i
             ><span class="futbox3_content">+91 9311732440</span>
           </p>
-          <p class="icon">
+          <p class="icon futbox3_content">
             <i class="fas fa-business-time"></i>
             <span class="futbox3_content"
               >AM To 8:00 PM , Monday ,<br />To Sunday</span
