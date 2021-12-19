@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Bella Vita Organic | Natural Skin Care Products Online | Ayurvedic Bea
-    </title>
+    <title>Create Account</title>
     <!-- favicon -->
     <link
       rel="shortcut icon"
@@ -43,7 +41,37 @@
   </head>
   <body>
     <div id="header_div"></div>
-    <div id="create_acc"></div>
+    <div class="create_acc">
+      <a href="index.html"><p class="cls">Home</p></a>
+      <i class="fas fa-chevron-right" id="gt"></i>
+      <a href="signup.html"> <p class="cls">Create Account</p></a>
+      <p id="heading">CREATE AN ACCOUNT</p>
+      <hr id="signup_hr" />
+
+      <p id="subHeading">Sign up for a free account at Bella Vita Organic.</p>
+
+      <div id="myForm">
+        <form id="register">
+          <label class="lable">Name</label><br />
+          <input id="fname" type="text" /><br />
+          <label class="lable"> User Name</label><br />
+          <input id="lname" type="text" /><br />
+          <label class="lable">Your Email Address <sup>*</sup></label
+          ><br />
+          <input id="signup_email" type="email" /><br />
+          <label class="lable">Your Password <sup>*</sup></label
+          ><br />
+          <input id="signup_password" type="password" /><br />
+          <label class="lable">Mobile Number</label><br />
+          <input id="mobile" type="number" /><br />
+          <label class="lable">Description</label><br />
+          <input id="des" type="text" /><br />
+        </form>
+        <div class="Btn">
+          <button id="btn1" type="submit">CREATE AN ACCOUNT</button>
+        </div>
+      </div>
+    </div>
     <footer></footer>
   </body>
 </html>
@@ -57,4 +85,46 @@
   header_fun();
   let footer_div = document.querySelector("footer");
   footer_div.innerHTML = footer();
+</script>
+<script>
+  let create_acc = document.getElementById("btn1");
+  create_acc.addEventListener("click", () => {
+    Register();
+  });
+  async function Register() {
+    let signup_data = {
+      name: document.getElementById("fname").value,
+      email: document.getElementById("lname").value,
+      password: document.getElementById("signup_password").value,
+      username: document.getElementById("signup_email").value,
+      mobile: document.getElementById("mobile").value,
+      description: document.getElementById("des").value,
+    };
+
+    signup_data = JSON.stringify(signup_data);
+    console.log("signup_data:", signup_data);
+
+    let register_api = `https://masai-api-mocker.herokuapp.com/auth/register`;
+
+    // POST
+    let response = await fetch(register_api, {
+      method: "POST",
+
+      body: signup_data,
+      // more extra information about my request
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    let data = await response.json();
+    console.log("data:", data);
+
+    if (data.error === true) {
+      alert("User already exists");
+    } else {
+      alert("Account created sucessfully");
+      window.location.herf = "./index.html";
+    }
+  }
 </script>

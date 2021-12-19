@@ -4,7 +4,7 @@ let home_btn = document.getElementById("home_btn");
 let spinner = document.getElementById("spin");
 
 home_btn.addEventListener("click", () => {
-  alert("Please provide home page path");
+  window.location.href = "./index.html";
 });
 document.querySelectorAll(".payment_method").forEach((el) => {
   el.addEventListener("mouseover", () => {
@@ -53,9 +53,9 @@ submit.addEventListener("click", () => {
     setTimeout(() => {
       sucess.style.display = "block";
     }, 2000);
-    setTimeout(() => {
-      alert("Hey Provide Path");
-    }, 5000);
+    // setTimeout(() => {
+    //   alert("Hey Provide Path");
+    // }, 5000);
   }
   card_number.value === ""
     ? (card_number.style.borderColor = "red")
