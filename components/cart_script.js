@@ -1,4 +1,8 @@
-// localStorage.setItem("cart_items", JSON.stringify(prod))
+let pro=document.querySelector("#countinue-shopping-ahref");
+pro.addEventListener("click", function() {
+  window.location.href = "./product.html"
+})
+
 
 let cartData = JSON.parse(localStorage.getItem("cart_items")) || [];
 // console.log(cartData);
@@ -13,25 +17,47 @@ function showCartItems(data) {
     // Create the card, give it its class and innerHTML
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML += `<div class="item-card">
-        <img src=${item.Img_url} alt="">
-        <div class="item-text">
-            <div class="head-item-name">
-                <p class="item-name">${item.Name}</p>
-            </div>
-            <!-- <p class="item-offerId">Offer Identity: K49C32</p> -->
-             
-            <h4 id="item_price">Rs. ${item.Price}</h4>
-            <div class="qty-div">
-                <p>Quantity:</p>
-                
-            </div>
-        </div>
-    </div>`;
-    // let prod_img = document.querySelector(".card");
-    // prod_img.addEventListener("click", () => {
-    //   alert("click");
-    // });
+
+    let a=document.createElement("div")
+    a.className = "item-card"
+
+    let img=document.createElement("img")
+    img.src=item.Img_url
+    img.addEventListener("click", function () {
+      localStorage.setItem("brod_view", JSON.stringify(item));
+      window.location.href = "./prodView.html";
+    });
+
+    let b=document.createElement("div")
+    b.className="item-text"
+    
+    let c=document.createElement("div")
+    c.className="head-item-name"
+    c.addEventListener("click", function () {
+      localStorage.setItem("brod_view", JSON.stringify(item));
+      window.location.href = "./prodView.html";
+    });
+
+    let d=document.createElement("p")
+    d.className="item-name"
+    d.innerText=item.Name;
+
+    c.append(d);
+
+    let e=document.createElement("h4");
+    e.className="item-price"
+    e.innerText="Rs."+ item.Price;
+
+    let f=document.createElement("div");
+    f.className="qty-div"
+
+    let g=document.createElement("p");
+    g.innerText="Quantity:"
+    f.appendChild(g);
+
+    b.append(c, e, f);
+    a.append(img, b)
+    
     // Created the button, give its classes and innerHTML
     const ext = document.createElement("div");
     ext.id = "external-part";
@@ -95,7 +121,7 @@ function showCartItems(data) {
     // ext.appendChild(btn, remove_div)
     ext.append(btn, remove_div);
     // Append the button to the created card
-    card.appendChild(ext);
+    card.append(a,ext);
 
     // Add the card to the hard coded html div
     cartItemDiv.append(card);
