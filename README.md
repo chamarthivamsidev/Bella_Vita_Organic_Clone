@@ -5,6 +5,7 @@ Team: CodeArmy
 
 Team Members: 
   1. Chamarthi Vamsi
-  2. Vaibhav Dervekar
+  2. Vaibhav Darvekar
   3. Mujaffar Husain
   4. Suman Munde
+
