@@ -270,14 +270,15 @@ function header() {
 
 function header_fun() {
   // getting data from local storage
-  let login_status = JSON.parse(localStorage.getItem("login_status"));
-  let regd_users = JSON.parse(localStorage.getItem("regd_users"));
+  let login_status = JSON.parse(localStorage.getItem("login_status")) || [];
+  // let regd_users = JSON.parse(localStorage.getItem("regd_users")) || [];
   let cart_items = JSON.parse(localStorage.getItem("cart_items")) || 0;
 
   let login = document.getElementById("side_navbar_login");
   let login_details = document.getElementById("side_navbar_login_details");
   let login_btn = document.getElementById("login_btn");
   let logout = document.getElementById("logout_btn");
+  let create_acc_btn = document.getElementById("create_acc_btn");
   let header_cart_qty = document.getElementById("header_cart_qty");
   let side_navbar_cart = document.getElementById("side_navbar_cart");
   let empty_cart = document.getElementById("side_navbar_empty_cart");
@@ -364,44 +365,114 @@ function header_fun() {
     });
   }
 
-  // if (login_status.login === "false") {
-  //   login.style.display = "block";
-  // } else {
-  //   let user_name = document.querySelectorAll(".customer_login")[1];
-  //   user_name.innerHTML = `${login_status.name}`;
-  //   login_details.style.display = "block";
-  // }
+  if (login_status.length === 0) {
+    let obj = {
+      login: "false",
+      name: null,
+      email: null,
+    };
+    login_status.push(obj);
+    localStorage.setItem("login_status", JSON.stringify(login_status));
+  }
+
+  if (login_status[0].login === "false") {
+    login.style.display = "block";
+
+    // Create Account
+    create_acc_btn.addEventListener("click", () => {
+      window.location.href = "./signup.html";
+    });
+  } else {
+    let user_name = document.querySelectorAll(".customer_login")[1];
+    user_name.innerHTML = `${login_status[0].name}`;
+    login_details.style.display = "block";
+  }
 
   //Login
 
   login_btn.addEventListener("click", () => {
-    let email = form.email.value;
-    let password = form.pwd.value;
+    // let email = form.email.value;
+    // let password = form.pwd.value;
 
-    let flag = false;
+    // let flag = false;
 
-    for (let i = 0; i < regd_users.length; i++) {
-      if (regd_users[i].email == email && regd_users[i].password == password) {
-        login_status.login = "true";
-        login_status.name = `${regd_users[i].fname} ${regd_users[i].lname}`;
-        localStorage.setItem("login_status", JSON.stringify(login_status));
-        flag = true;
-        break;
-      }
-    }
+    // for (let i = 0; i < regd_users.length; i++) {
+    //   if (regd_users[i].email == email && regd_users[i].password == password) {
+    //     login_status.login = "true";
+    //     login_status.name = `${regd_users[i].fname} ${regd_users[i].lname}`;
+    //     localStorage.setItem("login_status", JSON.stringify(login_status));
+    //     flag = true;
+    //     break;
+    //   }
+    // }
 
-    if (flag === true) {
-      alert("Login Sucessfull");
-      document.location.reload();
-    } else {
-      alert("Invalid Username or Password");
-    }
+    // if (flag === true) {
+    //   alert("Login Sucessfull");
+    //   document.location.reload();
+    // } else {
+    //   alert("Invalid Username or Password");
+    // }
+    Login();
   });
+
+  async function Login() {
+    let login_data = {
+      username: document.getElementById("email").value,
+      password: document.getElementById("pwd").value,
+    };
+
+    login_data = JSON.stringify(login_data);
+
+    let login_api = `https://masai-api-mocker.herokuapp.com/auth/login`;
+
+    //fetch request
+
+    let resposne = await fetch(login_api, {
+      method: "POST",
+
+      body: login_data,
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    let data = await resposne.json();
+
+    if (data.error === true) {
+      alert("Invalid Username or Password");
+    } else {
+      let username = document.getElementById("email").value;
+      getProfile(username, data.token);
+    }
+  }
+
+  async function getProfile(username, token) {
+    let api = `https://masai-api-mocker.herokuapp.com/user/${username}`;
+
+    let response = await fetch(api, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    let data = await response.json();
+    let arr = JSON.parse(localStorage.getItem("login_status"));
+    arr[0].login = "true";
+    arr[0].name = data.name;
+    arr[0].email = data.email;
+
+    localStorage.setItem("login_status", JSON.stringify(arr));
+    alert(`Login Sucessfull Welcome ''${arr[0].name}''`);
+    window.location.reload();
+  }
 
   // Logout
   logout.addEventListener("click", () => {
-    login_status.login = "false";
-    login_status.name = null;
+    login_status[0].login = "false";
+    login_status[0].name = null;
+    login_status[0].email = null;
     localStorage.setItem("login_status", JSON.stringify(login_status));
     document.location.reload();
   });
@@ -428,7 +499,7 @@ function header_fun() {
   });
 
   view_cart.addEventListener("click", () => {
-    alert("Please Provide Cart Page Path");
+    window.location.href = "./cart.html";
   });
 
   close_btn[0].addEventListener("click", () => {
@@ -437,6 +508,7 @@ function header_fun() {
 
   close_btn[1].addEventListener("click", () => {
     document.getElementById("mySidenav_cart").style.width = "0";
+    window.location.reload();
   });
 
   admin_icon.addEventListener("click", () => {
@@ -470,8 +542,10 @@ function header_fun() {
   function myFunction() {
     if (window.pageYOffset >= sticky) {
       navbar.classList.add("sticky");
+      navbar.classList.add("header_box_shadow");
     } else {
       navbar.classList.remove("sticky");
+      navbar.classList.remove("header_box_shadow");
     }
   }
 }

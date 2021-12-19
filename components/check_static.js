@@ -50,7 +50,7 @@ function check_content() {
                 <img src="./images/checkout/admin.png" alt="" />
               </div>
               <div id="details">
-                <p>vamsi chamarthi(vamsi1147@gmail.com)</p>
+                <p id="checkout_user_details"></p>
                 <a href="#cart">Logout</a>
               </div>
             </div>
@@ -180,7 +180,7 @@ function prepaid_content() {
         <h2 class="contact_title">CONTACT</h2>
         <hr class="contact_hr" />
         <div id="email">
-          <p>vamsichamarthi1147@gmail.com</p>
+          <p id="checkout_user_details"></p>
           <p class="change">Change</p>
         </div>
         <h2 class="contact_title">SHIP TO</h2>
@@ -240,7 +240,7 @@ function payment_content() {
         <h2 class="contact_title">CONTACT</h2>
         <hr class="contact_hr" />
         <div id="email">
-          <p>vamsichamarthi1147@gmail.com</p>
+         <p id="checkout_user_details"></p>
           <p class="change">Change</p>
         </div>
         <h2 class="contact_title">SHIP TO</h2>

@@ -88,6 +88,9 @@ header {
   align-items: center;
   z-index: 10000;
 }
+.header_box_shadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 #company_logo {
   height: 60%;
   width: 13%;
@@ -325,11 +328,14 @@ header {
   margin-top: 0.8em;
   font-weight: 600;
 }
+#form input {
+  font-weight: 400;
+}
 .login_form_label sup {
   color: red;
 }
 #form input::placeholder {
-  font-weight: normal;
+  font-weight: 400;
 }
 #login_btn,
 #view_cart_btn,
