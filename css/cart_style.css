@@ -448,9 +448,11 @@ best-seller silde
 .slide-card-name {
   height: 45px;
   overflow: hidden;
+  cursor: pointer;
 }
 .slider-card > div > img {
   width: 100%;
+  cursor: pointer;
 }
 /* price box of slider */
 .price-div {
@@ -477,6 +479,7 @@ best-seller silde
   height: 30px;
   width: 100%;
   text-align: center;
+  cursor: pointer;
 }
 .buy-now-tag > #buy > p {
   padding-top: 4px;
