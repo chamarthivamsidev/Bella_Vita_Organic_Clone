@@ -1,4 +1,9 @@
 function content(cart_items, location, sub_total, sub_total_bottom) {
+  let checkout_user_details = document.getElementById("checkout_user_details");
+  let arr = JSON.parse(localStorage.getItem("login_status"));
+
+  checkout_user_details.innerHTML = `${arr[0].name}(${arr[0].email})`;
+
   display(cart_items);
 
   function display(cart_items) {

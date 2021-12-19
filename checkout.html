@@ -109,6 +109,10 @@
   // check_status;
 
   // checkout status
+  cart_page.addEventListener("click", () => {
+    window.location.href = "./cart.html";
+  });
+
   delivery_page.addEventListener("click", () => {
     for (let key in check_status) {
       key == "delivery" ? (check_status[key] = "1") : (check_status[key] = "0");

@@ -181,6 +181,7 @@ input[type="radio"] {
   font-size: 1.2em;
   border-radius: 5px;
   margin-left: 7.3em;
+  border: none;
 }
 #home_btn:hover {
   cursor: pointer;
