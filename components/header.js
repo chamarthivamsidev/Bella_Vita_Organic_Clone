@@ -270,7 +270,7 @@ function header() {
 
 function header_fun() {
   // getting data from local storage
-  let login_status = JSON.parse(localStorage.getItem("login_status"));
+  let login_status = JSON.parse(localStorage.getItem("login_status")) || [];
   let regd_users = JSON.parse(localStorage.getItem("regd_users"));
   let cart_items = JSON.parse(localStorage.getItem("cart_items")) || 0;
 
@@ -364,13 +364,22 @@ function header_fun() {
     });
   }
 
-  // if (login_status.login === "false") {
-  //   login.style.display = "block";
-  // } else {
-  //   let user_name = document.querySelectorAll(".customer_login")[1];
-  //   user_name.innerHTML = `${login_status.name}`;
-  //   login_details.style.display = "block";
-  // }
+  if (login_status.length === 0) {
+    let obj = {
+      login: "false",
+      name: null,
+    };
+    login_status.push(obj);
+    localStorage.setItem("login_status", JSON.stringify(obj));
+  }
+
+  if (login_status.login === "false") {
+    login.style.display = "block";
+  } else {
+    let user_name = document.querySelectorAll(".customer_login")[1];
+    user_name.innerHTML = `${login_status.name}`;
+    login_details.style.display = "block";
+  }
 
   //Login
 
@@ -428,7 +437,7 @@ function header_fun() {
   });
 
   view_cart.addEventListener("click", () => {
-    alert("Please Provide Cart Page Path");
+    window.location.href = "./cart.html";
   });
 
   close_btn[0].addEventListener("click", () => {
