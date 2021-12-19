@@ -201,3 +201,255 @@ body {
 .foot_icon span {
   margin: 0;
 }
+
+/* vaibhav css */
+.footer {
+  font-family: calibri;
+  display: none;
+
+  width: 360px;
+}
+.link {
+  margin-bottom: 10px;
+  display: flex;
+  border: 1px solid rgb(204, 207, 205);
+  padding: 11px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.link div:nth-child(1) {
+  margin-right: 160px;
+  margin-top: 3px;
+}
+.link div:nth-child(2) {
+  font-size: 22px;
+  font-weight: bold;
+}
+.google {
+  background-color: #d5e0ea;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.google div:nth-child(1) {
+  text-align: top;
+  height: 30px;
+  width: 80%;
+  text-align: center;
+}
+.google div:nth-child(2) {
+  padding: 7px;
+}
+.mac {
+  margin-top: 10px;
+}
+.mac img {
+  height: 35px;
+}
+.mac img:nth-child(1) {
+  margin-left: 20px;
+}
+.folder {
+  border: 0.1px solid rgb(202, 200, 200);
+
+  font-size: 13px;
+  padding: 12px;
+}
+.span {
+  margin-right: 165px;
+}
+.span1 {
+  margin-right: 185px;
+}
+.span2 {
+  margin-right: 215px;
+}
+.span3 {
+  margin-right: 195px;
+}
+.newslet {
+  margin-top: 60px;
+}
+.newslet p:nth-child(1) {
+  font-size: 15px;
+  margin: 5px;
+  font-weight: bold;
+  color: rgb(66, 66, 66);
+}
+.newslet p:nth-child(2) {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 5px;
+  padding-right: 48px;
+}
+.newslet p:nth-child(3) {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 5px;
+  padding-right: 48px;
+}
+.newslet div {
+  margin-top: 8px;
+}
+.newslet div input {
+  padding: 6px;
+  padding-right: 5px;
+}
+.newslet div button {
+  padding: 7px;
+  width: 110px;
+  background-color: black;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+}
+::placeholder {
+  font-size: 12px;
+}
+.logoes {
+  margin-top: 10px;
+  background-color: #d5e0ea;
+}
+.logoes div:nth-child(1) {
+  padding-top: 15px;
+}
+.logoes div:nth-child(2) {
+  padding-left: 55px;
+  font-size: 21px;
+}
+.logoes div:nth-child(2) i {
+  margin: 8px;
+}
+.logoes div:nth-child(3) {
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 90px;
+  padding-bottom: 8px;
+}
+@media screen and (max-width:400px) {
+
+  #footermainbox{
+    display: none;
+  }
+  .footer {
+    font-family: calibri;
+    display: block;
+  
+    width: 360px;
+  }
+  .link {
+    margin-bottom: 10px;
+    display: flex;
+    border: 1px solid rgb(204, 207, 205);
+    padding: 11px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .link div:nth-child(1) {
+    margin-right: 160px;
+    margin-top: 3px;
+  }
+  .link div:nth-child(2) {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .google {
+    background-color: #d5e0ea;
+    
+    margin-bottom: 10px;
+  }
+  .google div:nth-child(1) {
+    text-align: top;
+    height: 30px;
+    width: 80%;
+    text-align: center;
+  }
+ 
+  .mac {
+    margin-top: 15px;
+  }
+  .mac img {
+    height: 35px;
+    margin: 0;
+  }
+  .mac img:nth-child(1) {
+    margin-left: 20px;
+  }
+  .folder {
+    border: 0.1px solid rgb(202, 200, 200);
+  
+    font-size: 13px;
+    padding: 12px;
+  }
+  .span {
+    margin-right: 140px;
+  }
+  .span1 {
+    margin-right: 170px;
+  }
+  .span2 {
+    margin-right: 200px;
+  }
+  .span3 {
+    margin-right: 180px;
+  }
+  .newslet {
+    padding: 5px;
+    margin-top: 60px;
+  }
+  .newslet p:nth-child(1) {
+    font-size: 15px;
+    margin: 5px;
+    font-weight: bold;
+    color: rgb(66, 66, 66);
+  }
+  .newslet p:nth-child(2) {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px;
+    padding-right: 48px;
+  }
+  .newslet p:nth-child(3) {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px;
+    padding-right: 48px;
+  }
+  .newslet div {
+    margin-top: 8px;
+  }
+  .newslet div input {
+    padding: 3px;
+    padding-right: 5px;
+  }
+  .newslet div button {
+    padding: 7px;
+    width: 110px;
+    background-color: black;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  ::placeholder {
+    font-size: 12px;
+  }
+  .logoes {
+    margin-top: 10px;
+    background-color: #d5e0ea;
+  }
+  .logoes div:nth-child(1) {
+    padding-top: 25px;
+  }
+  .logoes div:nth-child(2) {
+    padding-left: 55px;
+    font-size: 21px;
+  }
+  .logoes div:nth-child(2) i {
+    margin: 8px;
+  }
+  .logoes div:nth-child(3) {
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 90px;
+    padding-bottom: 8px;
+  }
+}
