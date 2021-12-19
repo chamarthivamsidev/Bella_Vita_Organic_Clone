@@ -403,7 +403,7 @@ best-seller silde
 }
 .leftside:hover,
 .rightside:hover {
-  background-color: rgb(198, 221, 223);
+  background-color: rgb(216, 227, 228);
 }
 .leftside > img,
 .rightside > img {
@@ -574,4 +574,16 @@ best-seller silde
 .form-container .btn:hover,
 .open-button:hover {
   opacity: 1;
+}
+
+@media screen and (max-width:400px) {
+  
+  .rightside {
+    right: -26%;
+    top: -215px;
+    background-color: white;
+  }
+  .leftside{
+    background-color: white;
+  }
 }

@@ -12,6 +12,9 @@ body {
 .sticky + .content {
   padding-top: 100px;
 }
+.vab{
+ display: none;   
+}
 #top_banner {
   width: 100%;
   height: 3em;
@@ -478,4 +481,121 @@ header {
   height: 100%;
   font-weight: 700;
   margin-left: -0.3em;
+}
+
+@media screen and (max-width: 400px) {
+  #top_banner {
+    width: 100%;
+    height: 3.8em;
+    background-color: #f3c746;
+    font-family: "Museo Sans", sans-serif;
+    display: flex;
+  }
+  #top_banner_container {
+    margin-left: 80px;
+  }
+  #top_banner_title {
+    font-weight: bold;
+    margin: 0;
+    font-size: 10px;
+  }
+  #click_here {
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: block;
+  }
+  #click_here_btn {
+    border-radius: 0.3em;
+    background-color: white;
+    color: black;
+    border: none;
+    width: 10em;
+    margin: 0;
+    height: 27px;
+    font-weight: 550;
+    font-size: 10px;
+  }
+ 
+  /* header */
+  header {
+    position: relative;
+    height: 3.8em;
+    background-color: white;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+  }
+  #header_items {
+    display: none;
+  }
+  #company_logo {
+    height:70%;
+    width: 43%;
+    /* border: 1px solid teal; */
+margin-left: 65px;
+margin-top: 0px;
+
+  }
+ 
+  #header_icons {
+    height: 45%;
+    margin: 0;
+    position: absolute;
+    right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header_search {
+    font-size: 20px;
+    display: none;
+  }
+  #header_admin {
+    font-size: 23px;
+    margin: 3px;
+  }
+
+  #header_cart {
+    font-size: 19px;
+    margin-left: 0px;
+  }
+  #header_search:hover,
+  #header_admin:hover,
+  #cart_icon_div:hover {
+    cursor: pointer;
+  }
+  #header_qty {
+    width: 1.3em;
+    height: 1.2em;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    left: 80%;
+    top: 0;
+    right: 0;
+    bottom: 30px;
+    background-color: black;
+  }
+  #header_cart_qty {
+    color: white;
+    margin: 0;
+    margin-top: 3px;
+    margin-left: 0.7em;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 0.6em;
+  }
+  .vab{
+display: block;
+margin: 0;
+padding: 0;
+position: absolute;
+left: 10px;
+top: 13px;
+font-size: 30px;
+  }
 }

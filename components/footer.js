@@ -100,7 +100,73 @@ function footer() {
           <p id="futtext">©2020 Bella Vita Organic</p>
         </div>
       </div>
-    </div>`;
+    </div>
+    <div class="footer">
+    <div class="link">
+      <div>Quick Links</div>
+      <div><ion-icon name="add"></ion-icon></div>
+    </div>
+    <div class="google">
+      <div><span>We are also available on PlayStore and AppStore</span></div>
+      <div class="mac">
+        <img
+         
+          src="https://cdn.shopify.com/s/files/1/0439/5456/9367/files/1.png?v=1602914357"
+        />
+        <img
+          
+          src="https://cdn.shopify.com/s/files/1/0439/5456/9367/files/2_1.png?v=1602914345"
+        />
+      </div>
+    </div>
+    <div class="folder">
+      <span class="span">ONLINE PRESENSE</span>
+      <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+    </div>
+    <div class="folder">
+      <span class="span1">INFORMATION</span>
+      <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+    </div>
+    <div class="folder">
+      <span class="span2">SUPPORT</span>
+      <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+    </div>
+    <div class="folder">
+      <span class="span3">CONTACK US</span>
+      <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+    </div>
+
+    <div class="newslet">
+      <p>OUR NEWSLETTER</p>
+      <p>
+        Sign up here to get the latest news, updates and special offers
+        delivered to your inbox.
+      </p>
+      <p>Plus, you'll be the first to know about our discounts!</p>
+      <div>
+        <input type="text" placeholder="Enter Your Email Address" />
+        <button>SUBMIT</button>
+      </div>
+    </div>
+
+    <div class="logoes">
+      <div>
+        <img
+        
+          src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/payments-stripe-sub-footer_2.svg?v=1616140901"
+        />
+      </div>
+      <div>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-pinterest-square"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+      <div>©2020 Bella Vita Organic</div>
+    </div>
+  </div>
+    `;
 }
 
 export default footer;

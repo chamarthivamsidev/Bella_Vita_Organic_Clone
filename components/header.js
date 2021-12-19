@@ -13,6 +13,7 @@ function header() {
       </div>
     </div>
     <header id="navbar">
+    <span class="vab"><ion-icon name="menu-outline"></ion-icon></span>
       <div id="company_logo">
         <svg
           version="1.1"
