@@ -1116,7 +1116,7 @@ div {
   position: fixed;
   left: 15%;
   top: 60px;
-  z-index: 1000;
+  z-index: 10000000;
 }
 .onBuyBtn .Img_divv {
   width: 45%;
