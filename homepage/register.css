@@ -1,0 +1,69 @@
+.register-container{
+  margin-top: 30px;
+  margin-left: 20%;
+  width: 40%;
+  height: 800px;
+  /* border: 1px solid teal; */
+  vertical-align: top;
+  display: inline-block;
+}
+.lable{
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 7px;
+  font-family: "Museo Sans",sans-serif !important;
+}
+#fname{
+ width: 60%;
+ height: 35px;
+ margin-left: 10px;
+ 
+}
+#lname{
+  width: 60%;
+  height: 35px;
+  margin-left: 10px;
+  
+ }
+ #mob{
+  width: 60%;
+  height: 50px;
+  margin-left: 10px;
+  
+ }
+ #email{
+  width: 60%;
+  height: 35px;
+  margin-left: 10px;
+  
+ }
+ #password{
+  width: 60%;
+  height: 35px;
+  margin-left: 10px;
+  
+ }
+ #btn1{
+  width: 60%;
+  height: 35px;
+  margin-left: 10px;
+  background-color: black;
+  color: white;
+  font-size: 20PX;
+  
+ }
+ #btn1:hover{
+   background-color: green;
+ }
+ .cls{
+   display: inline-block;
+   margin-left: 7px;
+   font-weight: bold;
+   font-family: "Museo Sans",sans-serif !important;
+ }
+ #heading{
+   font-family: "Museo Sans",sans-serif !important;
+ }
+ #subHeading{
+   font-family: "Museo Sans",sans-serif !important;
+ }
