@@ -52,6 +52,7 @@ function content(cart_items, location, sub_total, sub_total_bottom) {
           sub_total.innerHTML = `₹ ${x}.00`;
           sub_total_bottom.innerHTML = `<span>INR</span> ₹${x}.00`;
           localStorage.setItem("cart_items", JSON.stringify(cart_items));
+          document.location.reload();
         }
       });
 
@@ -80,6 +81,7 @@ function content(cart_items, location, sub_total, sub_total_bottom) {
         sub_total.innerHTML = `₹ ${x}.00`;
         sub_total_bottom.innerHTML = `<span>INR</span> ₹${x}.00`;
         localStorage.setItem("cart_items", JSON.stringify(cart_items));
+        document.location.reload();
       });
 
       let title = document.createElement("p");
