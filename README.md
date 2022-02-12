@@ -1,4 +1,10 @@
-# Bella_Vita_Organic_Clone https://www.bellavitaorganic.com/
+![nord.png](https://cdn.shopify.com/s/files/1/0054/6665/2718/files/bvo-updated-logo-2.png?v=1624107079)
+
+![Build Status](https://cdn.hashnode.com/res/hashnode/image/upload/v1639927185177/diTNoIr4q.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress)
+
+Bella Vita Organic, Inc. is an Indian Health care Organic store. Founded in 2005 by W. Verman and F. Walia, it originated as a Organic Products store and evolved into a full-line retailer with departments for Hair Care, Skin Care, Body Care, cosmetics, and fragrances..
+
+---
 
 Construct Week Project - U3 (Masai School) 
 
